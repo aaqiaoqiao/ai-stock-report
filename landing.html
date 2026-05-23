@@ -350,16 +350,59 @@
   /* CTA */
   .cta-block {
     text-align: center;
-    padding: 48px 24px;
+    padding: 56px 24px;
     background: var(--card);
     border: 1px solid var(--border);
     margin-bottom: 40px;
+    position: relative;
+  }
+
+  .cta-block::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--amber), transparent);
+  }
+
+  .price-tag {
+    font-size: 72px;
+    font-weight: 900;
+    font-family: 'Space Mono', monospace;
+    color: var(--amber);
+    line-height: 1;
+    margin-bottom: 10px;
+    letter-spacing: -2px;
+  }
+
+  .price-note {
+    font-size: 16px;
+    color: var(--text);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+
+  .price-features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 14px;
+    color: var(--text-dim);
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 1px;
+    margin-bottom: 32px;
+  }
+
+  .price-features span {
+    padding: 4px 14px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
   }
 
   .cta-link {
     display: inline-block;
-    padding: 12px 32px;
-    font-size: 13px;
+    padding: 14px 36px;
+    font-size: 14px;
     letter-spacing: 2px;
     text-decoration: none;
     color: var(--bg);
@@ -570,10 +613,11 @@
   <!-- CTA -->
   <div class="cta-block">
     <div class="price-tag">¥ 9.9</div>
-    <div class="note">10 份完整报告 · 3.5 万字 · K 线图表 · AI 生成</div>
-    <div class="features">
-      <span>腾讯</span><span>·</span><span>茅台</span><span>·</span><span>宁德</span><span>·</span><span>阿里</span><span>·</span><span>美团</span>
+    <div class="price-note">10 份完整报告 · 3.5 万字 · K 线图表 · AI 生成</div>
+    <div class="price-features">
+      <span>腾讯</span><span>茅台</span><span>宁德</span><span>阿里</span><span>美团</span><span>小米</span><span>京东</span><span>比亚迪</span><span>汇丰</span><span>平安</span>
     </div>
+    <a href="./reports.html" class="cta-link">查看历史报告 →</a>
   </div>
 
   <!-- PAYMENT -->
