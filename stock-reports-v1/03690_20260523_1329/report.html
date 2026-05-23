@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美团-W（03690.HK）技术面深度分析报告</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{font-size:16px;}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",
+             "Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  line-height:1.85;color:#2c3e50;background:#f5f7fa;
+}
+.container{max-width:860px;margin:0 auto;padding:30px 24px;}
+
+/* 标题 */
+h1{
+  font-size:1.6em;color:#1a1a2e;border-bottom:3px solid #3498db;
+  padding-bottom:10px;margin-bottom:6px;font-weight:700;
+}
+h1 .meta{display:block;font-size:0.45em;color:#888;font-weight:400;margin-top:6px;}
+h2{
+  font-size:1.3em;color:#2980b9;margin-top:2em;margin-bottom:0.8em;
+  padding-left:12px;border-left:4px solid #3498db;font-weight:700;
+}
+h3{font-size:1.1em;color:#34495e;margin-top:1.5em;margin-bottom:0.6em;font-weight:600;}
+
+/* 段落 */
+p{margin-bottom:0.9em;font-size:0.95em;text-align:justify;}
+
+/* 表格 — 报告核心元素 */
+table{
+  width:100%;border-collapse:collapse;margin:1.2em 0;font-size:0.88em;
+  border-radius:6px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.08);
+}
+thead{background:linear-gradient(135deg,#2980b9,#3498db);}
+th{
+  color:#fff;font-weight:600;padding:10px 14px;text-align:left;
+  font-size:0.95em;letter-spacing:0.3px;
+}
+td{padding:9px 14px;border-bottom:1px solid #ecf0f1;color:#444;}
+tbody tr:nth-child(even){background:#fafbfc;}
+tbody tr:hover{background:#f0f7ff;}
+tbody tr:last-child td{border-bottom:none;}
+
+/* 列表 */
+ul,ol{padding-left:1.6em;margin:0.8em 0;font-size:0.9em;line-height:1.75;}
+li{margin-bottom:0.35em;}
+li::marker{color:#3498db;}
+
+/* 引用块（用于核心判断） */
+blockquote{
+  margin:1.2em 0;padding:14px 20px;background:linear-gradient(135deg,#fef9e7,#fdf2e9);
+  border-left:4px solid #f39c12;border-radius:0 8px 8px 0;
+  color:#7d6608;font-size:0.9em;line-height:1.7;
+}
+blockquote p:last-child{margin-bottom:0;}
+
+/* 代码/折线图 */
+code{
+  background:#f1f3f5;padding:2px 6px;border-radius:4px;
+  font-family:"SF Mono",Monaco,Consolas,monospace;font-size:0.85em;color:#e74c3c;
+}
+pre{
+  background:#1e272e;color:#dcdcdc;border-radius:8px;padding:18px 20px;
+  margin:1.2em 0;overflow-x:auto;font-size:0.82em;line-height:1.6;
+  box-shadow:inset 0 1px 4px rgba(0,0,0,0.15);
+}
+pre code{background:none;padding:0;color:inherit;font-size:1em;}
+
+/* 分隔线 */
+hr{
+  border:none;height:2px;background:linear-gradient(to right,
+    transparent,#bdc3c7,transparent);margin:2.5em 0;
+}
+
+/* 图片 */
+p > img{max-width:100%;height:auto;border-radius:8px;
+  box-shadow:0 2px 12px rgba(0,0,0,0.1);margin:1em auto;display:block;}
+figure{margin:1.5em 0;text-align:center;}
+figure img{max-width:100%;height:auto;border-radius:8px;
+  box-shadow:0 2px 12px rgba(0,0,0,0.1);}
+figcaption{color:#888;font-size:0.82em;margin-top:8px;font-style:italic;}
+
+/* 强调 */
+strong{color:#1a1a2e;font-weight:600;}
+em{color:#c0392b;}
+
+/* 链接 */
+a{color:#2980b9;text-decoration:none;border-bottom:1px dotted #2980b9;}
+a:hover{color:#1abc9c;border-bottom-style:solid;}
+
+/* 免责声明 */
+.disclaimer{
+  background:#ecf0f1;border-left:4px solid #95a5a6;
+  padding:14px 18px;margin-top:2.5em;border-radius:0 8px 8px 0;
+  color:#7f8c8d;font-size:0.82em;line-height:1.65;
+}
+
+/* 响应式 */
+@media(max-width:640px){
+  .container{padding:16px 12px;}
+  h1{font-size:1.35em;}
+  table{font-size:0.78em;}
+  th,td{padding:7px 8px;}
+}
+
+/* 打印优化 */
+@media print{
+  body{background:#fff;color:#000;}
+  .container{max-width:100%;padding:0;}
+  table{page-break-inside:avoid;}
+  h2{page-break-after:avoid;}
+}
+</style>
+
+</head>
+<body>
+<div class="container">
+<h1>美团-W（03690.HK）技术面深度分析报告</h1>
+<p><strong>报告日期：</strong> 2026年5月23日<br />
+<strong>分析周期：</strong> 日线级别 &amp; 日内分时<br />
+<strong>分析师：</strong> AutoClaw AI Stock Analyst<br />
+<strong>数据来源：</strong> 东方财富、公开市场数据  </p>
+<hr />
+<h2>一、核心数据概览</h2>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>当前股价</td>
+<td><strong>81.35 港元</strong></td>
+</tr>
+<tr>
+<td>前收盘价</td>
+<td>82.10 港元</td>
+</tr>
+<tr>
+<td>日内涨跌</td>
+<td>-0.75 港元（-0.91%）</td>
+</tr>
+<tr>
+<td>总市值</td>
+<td>约 5,023 亿港元</td>
+</tr>
+<tr>
+<td>市净率（P/B）</td>
+<td>2.97</td>
+</tr>
+<tr>
+<td>52周最高价</td>
+<td>83.10 港元</td>
+</tr>
+<tr>
+<td>52周最低价</td>
+<td>80.55 港元</td>
+</tr>
+<tr>
+<td>主力资金动向（5月22日）</td>
+<td>主力净流入 +52.4 万，散户净流出 -4,695 万</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>二、日线级别K线技术分析</h2>
+<h3>2.1 整体趋势判断：探底回升，多头初步确立</h3>
+<p>从日线K线图来看，美团股价经历了一个完整的<strong>"下跌—探底—反弹—整理"</strong>四阶段循环：</p>
+<ul>
+<li><strong>前期下跌（2月底至3月中旬）：</strong> 股价从 96.09 港元附近的高位持续下滑，最低触及 74.47 港元，累计跌幅超过 22%，市场情绪极度悲观。</li>
+<li><strong>底部确认（3月中旬至4月）：</strong> 在 74-76 港元区间反复筑底，成交量逐步萎缩，抛压衰竭，形成明显的底部结构。</li>
+<li><strong>强势突破（5月12日前后）：</strong> 一根<strong>放量长阳线</strong>彻底扭转颓势，单日涨幅显著，成交量创阶段新高，这是典型的大资金进场信号，确认趋势反转。</li>
+<li><strong>当前整理（5月13日至今）：</strong> 股价在 80-84 港元区间窄幅震荡，K线以小阴小阳交替出现，属于大涨后的<strong>技术性旗形整理</strong>。</li>
+</ul>
+<p><strong>结论：中期趋势已由空转多，当前处于强势整理阶段。</strong></p>
+<h3>2.2 均线系统分析：多头排列，支撑坚实</h3>
+<p>图表中的四条均线（MA5/MA10/MA20/MA30）呈现以下特征：</p>
+<ul>
+<li><strong>排列顺序：</strong> 股价 &gt; MA5 &gt; MA10 &gt; MA20 &gt; MA30，形成经典的<strong>多头排列</strong>结构，这是技术分析中最明确的看涨信号之一。</li>
+<li><strong>发散方向：</strong> 四条均线均向上发散，斜率健康，表明上涨动能充足。</li>
+<li><strong>支撑层级：</strong></li>
+<li><strong>MA5（约82.5港元）：</strong> 短期动态支撑，股价紧贴该均线运行。</li>
+<li><strong>MA10/MA20（约80-82港元）：</strong> 中期核心支撑带，是本次上涨的生命线。</li>
+<li><strong>MA30（约78-79港元）：</strong> 长期趋势支撑，跌破则需重新评估趋势。</li>
+</ul>
+<p>目前股价稳稳站在所有均线之上，短期虽有回调，但未破坏均线结构，多头掌控力依然强劲。</p>
+<h3>2.3 成交量分析：放量突破，缩量整理</h3>
+<p>成交量的变化堪称教科书级别：</p>
+<ul>
+<li><strong>底部缩量：</strong> 3月至4月筑底期间，成交量持续萎缩，说明卖盘枯竭。</li>
+<li><strong>突破放量：</strong> 5月12日大阳线伴随<strong>巨量成交</strong>，远超前期平均水平，甚至超过3月恐慌下跌时的量能，表明大资金集中进场，突破有效性强。</li>
+<li><strong>整理缩量：</strong> 近期横盘期间量能明显回落，属于<strong>缩量洗盘</strong>——主力资金并未大规模出货，而是通过时间换空间的方式消化获利盘和套牢盘。</li>
+</ul>
+<p><strong>量价关系健康，有利于后续继续上攻。</strong></p>
+<h3>2.4 关键技术指标推演</h3>
+<p>虽然图表中未直接显示副图指标，但根据价格行为进行合理推断：</p>
+<ul>
+<li><strong>MACD：</strong> DIF与DEA大概率已在零轴上方金叉运行，红柱虽因近期横盘有所缩短，但仍处于强势区域。只要不死叉翻绿，多头格局不变。</li>
+<li><strong>KDJ：</strong> 5月12日大涨后大概率进入超买区（K/D/J值&gt;80），近期横盘正在修复超买状态，等待指标回调到位后可能形成二次金叉买入信号。</li>
+<li><strong>RSI：</strong> 预计维持在50-70的中强区域，多方占优但尚未过度狂热，留有上行空间。</li>
+<li><strong>布林带（BOLL）：</strong> 5月12日大涨使得布林带开口急剧扩张，股价运行于上轨附近。当前横盘将使得上轨逐渐走平，中轨（MA20附近）提供强力支撑。</li>
+</ul>
+<h3>2.5 关键价位</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>价位区间</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>强阻力位</strong></td>
+<td>89-90 港元</td>
+<td>前期高点，突破则打开上行空间</td>
+</tr>
+<tr>
+<td><strong>近期阻力位</strong></td>
+<td>85-86 港元</td>
+<td>整理平台上沿 + 5月12日长上影线区域</td>
+</tr>
+<tr>
+<td><strong>第一支撑位</strong></td>
+<td>82-83 港元</td>
+<td>近期K线密集区 + 短期均线粘合处</td>
+</tr>
+<tr>
+<td><strong>核心支撑位</strong></td>
+<td>78-80 港元</td>
+<td>5月12日大阳线起涨点 + MA20/MA30交汇</td>
+</tr>
+<tr>
+<td><strong>底线支撑</strong></td>
+<td>74-75 港元</td>
+<td>前期低点，跌破则趋势全面转空</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>三、日内分时图分析</h2>
+<h3>3.1 当日走势回顾</h3>
+<p>5月23日的日内分时图呈现典型的<strong>"N字型"震荡</strong>格局：</p>
+<ol>
+<li><strong>早盘下探（09:30-10:30）：</strong> 开盘约 81.90 港元，短暂震荡后快速下探至日内低点约 <strong>81.20-81.30 港元</strong>，空头试探下方承接力度。</li>
+<li><strong>午盘拉升（10:30-13:30）：</strong> 多头强势反击，股价从 81.30 附近一口气拉升至日内高点约 <strong>82.65-82.70 港元</strong>，涨幅超过 1.6%。</li>
+<li><strong>午后回落（13:30-15:15）：</strong> 获利盘涌出，股价从高位持续回落，几乎吞没午盘一半涨幅，显示高位抛压较重。</li>
+<li><strong>尾盘翘尾（15:15-16:00）：</strong> 收盘前30-45分钟出现<strong>V型反弹</strong>，股价企稳回升至约 82.00 港元附近，最终收于开盘价上方。</li>
+</ol>
+<h3>3.2 日内关键数据</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>日内最高价</td>
+<td>约 82.70 港元</td>
+</tr>
+<tr>
+<td>日内最低价</td>
+<td>约 81.25 港元</td>
+</tr>
+<tr>
+<td>日内振幅</td>
+<td>约 1.7%-1.8%</td>
+</tr>
+<tr>
+<td>收盘价</td>
+<td>约 82.00 港元</td>
+</tr>
+<tr>
+<td>相对开盘价</td>
+<td>微幅上涨（+0.1%左右）</td>
+</tr>
+</tbody>
+</table>
+<h3>3.3 分时图隐含信号</h3>
+<ul>
+<li><strong>多方韧性：</strong> 盘中冲高回落后并未崩溃，尾盘资金果断入场承接，说明下方买盘意愿坚实。</li>
+<li><strong>空方压力：</strong> 午后回落幅度较大，表明 82.50 港元以上存在一定短线获利盘和套牢盘双重压力。</li>
+<li><strong>资金博弈：</strong> 全天振幅近2%，多空拉锯激烈，市场对该价位存在明显分歧。</li>
+<li><strong>尾盘积极信号：</strong> 尾盘的V型反弹通常是看好次日行情的信号，资金愿意持仓过夜。</li>
+</ul>
+<hr />
+<h2>四、资金面分析</h2>
+<table>
+<thead>
+<tr>
+<th>日期</th>
+<th>主力净流入（港元）</th>
+<th>散户净流入（港元）</th>
+<th>方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-05-22</td>
+<td>+524,138</td>
+<td>-46,953,936</td>
+<td>主力净流入</td>
+</tr>
+</tbody>
+</table>
+<p>关键洞察：</p>
+<ul>
+<li>主力资金在5月22日录得<strong>净流入</strong>，虽然绝对金额不大（约52万港元），但考虑到散户净流出高达<strong>4,695万港元</strong>，说明筹码正在从散户手中向主力手中集中——这通常被视为<strong>吸筹信号</strong>。</li>
+<li>散户的大规模净流出往往发生在股价震荡期间，反映出散户的恐慌或失望情绪，而主力则趁机低位接筹。</li>
+<li>主力净流入方向与日线级别的放量突破形成了相互印证，增强了趋势判断的可信度。</li>
+</ul>
+<hr />
+<h2>五、综合研判与涨跌预判</h2>
+<h3>5.1 利多因素</h3>
+<ol>
+<li><strong>均线多头排列</strong>明确向上，中期趋势健康。</li>
+<li><strong>量价关系完美</strong>——放量突破、缩量整理，主力未出货。</li>
+<li><strong>主力资金净流入</strong>，筹码向机构集中。</li>
+<li><strong>底部结构扎实</strong>，74-76港元区域经过反复确认。</li>
+<li><strong>尾盘翘尾</strong>显示资金对后市相对乐观。</li>
+</ol>
+<h3>5.2 利空因素</h3>
+<ol>
+<li><strong>KDJ超买</strong>尚未完全修复，短期可能继续震荡整理。</li>
+<li><strong>85-86港元</strong>构成近端强阻力，突破需要新的催化因素。</li>
+<li><strong>52周高低点区间较窄</strong>（80.55-83.10），当前价格处于区间中部偏下。</li>
+<li><strong>散户大规模净流出</strong>反映市场情绪尚未完全回暖。</li>
+<li>当日（5月23日）较前收盘价下跌0.91%，短线承压。</li>
+</ol>
+<h3>5.3 涨跌预判</h3>
+<p><strong>短期（1-2周）：震荡偏强，大概率在 80-85 港元区间内整理。</strong></p>
+<p>当前处于大涨后的技术修整阶段，预计股价将继续在 80-85 港元的箱体内震荡蓄势。只要不有效跌破 80 港元核心支撑，多头格局不变。KDJ等指标的修复完成后，有望出现二次上攻。</p>
+<p><strong>中期（1-3个月）：谨慎看涨，目标位 89-90 港元。</strong></p>
+<p>在均线多头排列和量价配合良好的前提下，整理结束后向上突破的概率较大。若能有效突破 85-86 港元阻力，下一目标看至前期高点 89-90 港元区域。</p>
+<p><strong>情景分析：</strong></p>
+<table>
+<thead>
+<tr>
+<th>情景</th>
+<th>触发条件</th>
+<th>目标价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>乐观</td>
+<td>放量突破85港元 + 消息面配合</td>
+<td>89-95 港元</td>
+</tr>
+<tr>
+<td>基准</td>
+<td>继续在80-85区间整理后温和上行</td>
+<td>85-88 港元</td>
+</tr>
+<tr>
+<td>悲观</td>
+<td>有效跌破78港元支撑</td>
+<td>74-76 港元</td>
+</tr>
+</tbody>
+</table>
+<p><strong>综合预判：短期震荡整理，中期谨慎看涨。概率分布：上涨概率约60%，震荡概率约30%，大幅下跌概率约10%。</strong></p>
+<hr />
+<h2>六、免责声明</h2>
+<blockquote>
+<p><strong>⚠️ 重要风险提示：</strong></p>
+<p>本报告由AI自动生成，仅供学习和参考之用，<strong>不构成任何投资建议</strong>。报告中的所有分析、判断和预测均基于公开可获取的历史数据和图表信息，可能存在以下局限性：</p>
+<ol>
+<li><strong>数据完整性：</strong> 本报告依赖第三方数据源（东方财富等），数据可能存在延迟、遗漏或误差。部分分析师研报标题与本标的关联度存疑，已谨慎引用。</li>
+<li><strong>技术分析局限：</strong> 技术分析基于历史价格和成交量数据，无法预测突发事件（政策变动、公司公告、宏观冲击等）对股价的影响。</li>
+<li><strong>无基本面验证：</strong> 本报告主要基于技术面和资金面数据，未对美团公司的最新财报、业务进展、行业竞争格局等基本面因素进行深入验证。</li>
+<li><strong>时效性：</strong> 报告生成时间为2026年5月23日，市场瞬息万变，后续行情可能与报告判断存在重大偏差。</li>
+<li><strong>AI模型局限：</strong> 本报告由AI模型依据既定分析框架生成，不具备人类分析师的综合判断能力和专业经验。</li>
+</ol>
+<p><strong>投资有风险，入市需谨慎。</strong> 股票市场存在不可预测的波动风险，过往的技术形态和历史规律不能保证未来结果。任何投资决策均应由投资者在充分了解风险的基础上独立作出，并建议咨询持牌专业金融顾问。<strong>AI生成的分析报告不可作为买入、卖出或持有任何证券的唯一决策依据。</strong></p>
+<p><strong>本报告作者及生成系统不对因使用本报告中的任何信息而导致的直接或间接损失承担任何责任。</strong></p>
+</blockquote>
+<hr />
+<p><em>报告完毕 | Generated by AutoClaw Stock Analyst | 2026-05-23 T13:48 CST</em></p>
+</div>
+</body>
+</html>

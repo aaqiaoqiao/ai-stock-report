@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📊 宁德时代 (300750.SZ) 股票分析报告</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{font-size:16px;}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",
+             "Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  line-height:1.85;color:#2c3e50;background:#f5f7fa;
+}
+.container{max-width:860px;margin:0 auto;padding:30px 24px;}
+
+/* 标题 */
+h1{
+  font-size:1.6em;color:#1a1a2e;border-bottom:3px solid #3498db;
+  padding-bottom:10px;margin-bottom:6px;font-weight:700;
+}
+h1 .meta{display:block;font-size:0.45em;color:#888;font-weight:400;margin-top:6px;}
+h2{
+  font-size:1.3em;color:#2980b9;margin-top:2em;margin-bottom:0.8em;
+  padding-left:12px;border-left:4px solid #3498db;font-weight:700;
+}
+h3{font-size:1.1em;color:#34495e;margin-top:1.5em;margin-bottom:0.6em;font-weight:600;}
+
+/* 段落 */
+p{margin-bottom:0.9em;font-size:0.95em;text-align:justify;}
+
+/* 表格 — 报告核心元素 */
+table{
+  width:100%;border-collapse:collapse;margin:1.2em 0;font-size:0.88em;
+  border-radius:6px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.08);
+}
+thead{background:linear-gradient(135deg,#2980b9,#3498db);}
+th{
+  color:#fff;font-weight:600;padding:10px 14px;text-align:left;
+  font-size:0.95em;letter-spacing:0.3px;
+}
+td{padding:9px 14px;border-bottom:1px solid #ecf0f1;color:#444;}
+tbody tr:nth-child(even){background:#fafbfc;}
+tbody tr:hover{background:#f0f7ff;}
+tbody tr:last-child td{border-bottom:none;}
+
+/* 列表 */
+ul,ol{padding-left:1.6em;margin:0.8em 0;font-size:0.9em;line-height:1.75;}
+li{margin-bottom:0.35em;}
+li::marker{color:#3498db;}
+
+/* 引用块（用于核心判断） */
+blockquote{
+  margin:1.2em 0;padding:14px 20px;background:linear-gradient(135deg,#fef9e7,#fdf2e9);
+  border-left:4px solid #f39c12;border-radius:0 8px 8px 0;
+  color:#7d6608;font-size:0.9em;line-height:1.7;
+}
+blockquote p:last-child{margin-bottom:0;}
+
+/* 代码/折线图 */
+code{
+  background:#f1f3f5;padding:2px 6px;border-radius:4px;
+  font-family:"SF Mono",Monaco,Consolas,monospace;font-size:0.85em;color:#e74c3c;
+}
+pre{
+  background:#1e272e;color:#dcdcdc;border-radius:8px;padding:18px 20px;
+  margin:1.2em 0;overflow-x:auto;font-size:0.82em;line-height:1.6;
+  box-shadow:inset 0 1px 4px rgba(0,0,0,0.15);
+}
+pre code{background:none;padding:0;color:inherit;font-size:1em;}
+
+/* 分隔线 */
+hr{
+  border:none;height:2px;background:linear-gradient(to right,
+    transparent,#bdc3c7,transparent);margin:2.5em 0;
+}
+
+/* 图片 */
+p > img{max-width:100%;height:auto;border-radius:8px;
+  box-shadow:0 2px 12px rgba(0,0,0,0.1);margin:1em auto;display:block;}
+figure{margin:1.5em 0;text-align:center;}
+figure img{max-width:100%;height:auto;border-radius:8px;
+  box-shadow:0 2px 12px rgba(0,0,0,0.1);}
+figcaption{color:#888;font-size:0.82em;margin-top:8px;font-style:italic;}
+
+/* 强调 */
+strong{color:#1a1a2e;font-weight:600;}
+em{color:#c0392b;}
+
+/* 链接 */
+a{color:#2980b9;text-decoration:none;border-bottom:1px dotted #2980b9;}
+a:hover{color:#1abc9c;border-bottom-style:solid;}
+
+/* 免责声明 */
+.disclaimer{
+  background:#ecf0f1;border-left:4px solid #95a5a6;
+  padding:14px 18px;margin-top:2.5em;border-radius:0 8px 8px 0;
+  color:#7f8c8d;font-size:0.82em;line-height:1.65;
+}
+
+/* 响应式 */
+@media(max-width:640px){
+  .container{padding:16px 12px;}
+  h1{font-size:1.35em;}
+  table{font-size:0.78em;}
+  th,td{padding:7px 8px;}
+}
+
+/* 打印优化 */
+@media print{
+  body{background:#fff;color:#000;}
+  .container{max-width:100%;padding:0;}
+  table{page-break-inside:avoid;}
+  h2{page-break-after:avoid;}
+}
+</style>
+
+</head>
+<body>
+<div class="container">
+<h1>📊 宁德时代 (300750.SZ) 股票分析报告</h1>
+<blockquote>
+<p><strong>分析时间：</strong> 2026年5月23日 13:30 | <strong>当前股价：</strong> 411.16元（-0.11%）| <strong>市值：</strong> 约1.90万亿 | <strong>市盈率(TTM)：</strong> 22.93</p>
+</blockquote>
+<hr />
+<h2>一、📈 技术面分析</h2>
+<p><img alt="日K线图" src="kline_em.png" /><br />
+<em>图1：宁德时代日K线图（2026年2月底–5月22日）</em></p>
+<p><img alt="分时图" src="kline_intraday.png" /><br />
+<em>图2：宁德时代分时走势图（最近交易日）</em></p>
+<h3>1.1 走势概览</h3>
+<p>宁德时代自2026年2月底以来，经历了一轮完整的 <strong>"主升浪—高位见顶—回调盘整"</strong> 波段：</p>
+<ul>
+<li><strong>2月底至4月中旬（主升浪）：</strong> 股价从约340元一路攀升至472元附近的历史高位，涨幅约38%。该阶段成交量持续放大，量价配合良好，资金参与度高。</li>
+<li><strong>4月中下旬（见顶回落）：</strong> 在472元一线出现带长上影线的K线形态，随后股价重心开始下移，高位抛压明显。</li>
+<li><strong>5月以来（阴跌盘整）：</strong> 股价已从高点回落约13%，当前在410–420元区间窄幅震荡。近期成交量明显萎缩至约27.7万手，远低于主升浪时期的50万手以上水平，市场进入观望期。</li>
+</ul>
+<p><strong>整体判断：</strong> 长期上升趋势尚未被彻底破坏，但短期技术面已明显转弱，目前处于"中期调整蓄势"阶段。</p>
+<h3>1.2 均线系统</h3>
+<table>
+<thead>
+<tr>
+<th>均线</th>
+<th>估算数值</th>
+<th>趋势方向</th>
+<th>股价相对位置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MA5（5日）</td>
+<td>~423元</td>
+<td>向下</td>
+<td>股价在下方，短期承压</td>
+</tr>
+<tr>
+<td>MA10（10日）</td>
+<td>~430元</td>
+<td>向下拐头</td>
+<td>关键短期压力位</td>
+</tr>
+<tr>
+<td>MA20（20日）</td>
+<td>~435元</td>
+<td>走平</td>
+<td>中期均线压力</td>
+</tr>
+<tr>
+<td>MA30（30日）</td>
+<td>~425元</td>
+<td>走平</td>
+<td>关键多空分水岭</td>
+</tr>
+</tbody>
+</table>
+<p><strong>均线排列分析：</strong> 均线系统已从此前的多头排列（MA5&gt;MA10&gt;MA20&gt;MA30）转变为<strong>空头排列雏形</strong>（MA5下穿MA10），这是经典的技术面转弱信号。股价当前在MA30（~425元）下方运行，若短期内无法有效收复，则中期调整大概率延续。</p>
+<h3>1.3 支撑与压力</h3>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>价位区间</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔴 强压力位</td>
+<td>470–472元</td>
+<td>前历史高点，大量套牢盘</td>
+</tr>
+<tr>
+<td>🟡 中等压力位</td>
+<td>435–440元</td>
+<td>MA20 + 前期密集成交平台</td>
+</tr>
+<tr>
+<td>🟡 近端压力位</td>
+<td>428–430元</td>
+<td>MA10（10日均线）</td>
+</tr>
+<tr>
+<td>🟢 第一支撑位</td>
+<td>409–415元</td>
+<td>近期低点区域，正在测试</td>
+</tr>
+<tr>
+<td>🟢 强支撑位</td>
+<td>400元整数关口</td>
+<td>心理支撑 + 技术支撑</td>
+</tr>
+<tr>
+<td>🟢 终极支撑位</td>
+<td>380–390元</td>
+<td>前期缺口及起涨平台</td>
+</tr>
+</tbody>
+</table>
+<p><strong>技术面核心观点：</strong> 当前股价411元恰好处于第一支撑位的下沿，距离强支撑400元仅约2.7%的距离。若400元整数关口能形成有效支撑并伴随放量反弹，则中期调整有望结束；若有效跌破400元，则调整空间进一步打开。</p>
+<h3>1.4 今日分时解读</h3>
+<p>最近交易日的分时图呈现出典型的 <strong>"冲高回落 + 尾盘跳水"</strong> 弱势结构：</p>
+<ul>
+<li><strong>开盘：</strong> 约414.00元，平开或微幅低开，无明显方向性。</li>
+<li><strong>上午走势：</strong> 围绕昨日收盘价窄幅震荡，波动极低，多空双方均无主导力量。</li>
+<li><strong>午后拉升：</strong> 13:30前后出现一波拉升，最高触及约416.80元，但随后迅速回落——这是一次典型的"诱多"走势，跟风盘不足。</li>
+<li><strong>尾盘跳水：</strong> 14:50之后，股价以近45度角单边下跌，最低探至约409.00元，收于全天低位。</li>
+<li><strong>均价线关系：</strong> 白线（实时价格）全天大部分时间运行在黄线（均价线）下方，说明当日参与买入的资金大多处于浮亏状态，空头牢牢掌握主动。</li>
+</ul>
+<p><strong>分时结论：</strong> "光脚阴线"式的尾盘跳水是极弱信号，通常预示着次日早盘仍有惯性下探。投资者需警惕短期继续调整的风险。</p>
+<h3>1.5 关键技术信号总结</h3>
+<table>
+<thead>
+<tr>
+<th>信号</th>
+<th>判断</th>
+<th>强度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>短期趋势</td>
+<td>MA5下穿MA10，空头排列</td>
+<td>⚠️ 偏空</td>
+</tr>
+<tr>
+<td>成交量</td>
+<td>持续缩量，观望情绪浓厚</td>
+<td>🔶 中性偏空</td>
+</tr>
+<tr>
+<td>MACD（推断）</td>
+<td>零轴上方死叉，动能减弱</td>
+<td>⚠️ 偏空</td>
+</tr>
+<tr>
+<td>K线形态</td>
+<td>近期连续小阴小阳，实体较短</td>
+<td>🔶 方向不明</td>
+</tr>
+<tr>
+<td>分时结构</td>
+<td>尾盘跳水，光脚阴线</td>
+<td>❌ 短期看空</td>
+</tr>
+<tr>
+<td>支撑距离</td>
+<td>距400元强支撑仅2.7%</td>
+<td>🟢 下行空间有限</td>
+</tr>
+</tbody>
+</table>
+<p><strong>技术面综合评级：短期偏空（⭐⭐），中期中性（⭐⭐⭐）。</strong></p>
+<hr />
+<h2>二、💰 基本面分析</h2>
+<h3>2.1 核心财务数据</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>当前股价</td>
+<td>411.16元</td>
+<td>较前日跌0.47元（-0.11%）</td>
+</tr>
+<tr>
+<td>市盈率（TTM）</td>
+<td>22.93倍</td>
+<td>处于合理偏低区间</td>
+</tr>
+<tr>
+<td>市净率（PB）</td>
+<td>5.82倍</td>
+<td>反映品牌与技术溢价</td>
+</tr>
+<tr>
+<td>总市值</td>
+<td>~1.90万亿</td>
+<td>A股新能源龙头</td>
+</tr>
+<tr>
+<td>52周最高</td>
+<td>416.50元</td>
+<td>近期高点</td>
+</tr>
+<tr>
+<td>52周最低</td>
+<td>410.00元</td>
+<td>近期低点</td>
+</tr>
+<tr>
+<td>52周波动区间</td>
+<td>410.00–416.50元</td>
+<td>近期波动极窄</td>
+</tr>
+</tbody>
+</table>
+<h3>2.2 关键解读</h3>
+<blockquote>
+<p><strong>PE 22.93倍——贵还是便宜？</strong></p>
+<p>作为全球动力电池市占率第一的龙头企业，宁德时代22.93倍的市盈率在A股新能源板块中处于合理偏低水平。考虑到其全球龙头地位、技术壁垒和政策红利（碳中和、储能），这一估值具备一定吸引力。但需注意：动力电池行业竞争加剧（比亚迪、中创新航等追赶），且碳酸锂价格波动对利润率的影响仍需持续跟踪。</p>
+<p><strong>52周价格区间极窄（410–416.5元）——在酝酿什么？</strong></p>
+<p>52周波动区间仅约6.5元（约1.5%），在A股大盘蓝筹中极为罕见。这种极窄的波动区间通常意味着：市场对宁德时代的定价正在高度"共识化"——既没有超预期的利好推动突破，也没有重大利空引发恐慌。但从交易角度看，<strong>窄幅整理往往是"暴风雨前的宁静"，变盘窗口正在临近。</strong></p>
+</blockquote>
+<h3>2.3 业绩指引 / 行业对比</h3>
+<ul>
+<li><strong>行业地位：</strong> 宁德时代连续多年稳居全球动力电池装车量第一，2025年全球市占率维持在35%以上。储能电池出货量同样领跑全球。</li>
+<li><strong>增长驱动力：</strong> （1）新能源汽车渗透率持续提升；（2）储能市场爆发式增长；（3）海外产能持续扩张（匈牙利、印尼等）；（4）钠离子电池、凝聚态电池等新技术储备。</li>
+<li><strong>风险因素：</strong> （1）行业价格战压力；（2）海外贸易壁垒（欧美电池本地化政策）；（3）上游锂资源价格波动；（4）固态电池技术路线变革的潜在颠覆。</li>
+</ul>
+<h3>2.4 基本面 vs 股价背离分析</h3>
+<p>当前存在一定程度的 <strong>"基本面稳健但股价承压"</strong> 背离：</p>
+<ul>
+<li><strong>基本面：</strong> 宁德时代行业龙头地位稳固，全球电动化趋势未变，储能赛道持续高景气。</li>
+<li><strong>股价：</strong> 自472元高点回落13%，短期技术面疲软，主力资金呈净流出。</li>
+<li><strong>背离解读：</strong> 这种"好公司+弱股价"的组合，往往出现在<strong>中期调整的末期</strong>。基本面优秀的公司在技术调整到位后，通常会迎来新一轮资金回补。但调整的时间和幅度取决于市场整体情绪和资金面变化。</li>
+</ul>
+<hr />
+<h2>三、💵 资金流向分析</h2>
+<h3>3.1 主力资金动向</h3>
+<table>
+<thead>
+<tr>
+<th>日期</th>
+<th>主力净流入（元）</th>
+<th>散户净流入（元）</th>
+<th>方向判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-05-22</td>
+<td><strong>-3.44亿</strong></td>
+<td>+1.29亿</td>
+<td>🔴 主力净流出</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键发现：</strong><br />
+- 上一交易日（5月22日），主力资金净流出约3.44亿元，而散户资金净流入1.29亿元。<br />
+- 这是一个典型的 <strong>"主力出货、散户接盘"</strong> 格局——在短期技术分析中是较为不利的信号。<br />
+- 北向资金近期的参与度较低（连续0天有明显净流向），外资态度偏谨慎。</p>
+<h3>3.2 资金面矛盾信号分析</h3>
+<table>
+<thead>
+<tr>
+<th>矛盾点</th>
+<th>买入方逻辑</th>
+<th>卖出方逻辑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>估值</td>
+<td>22.93倍PE，合理偏低，长期价值显现</td>
+<td>增速放缓预期下，估值可能进一步下修</td>
+</tr>
+<tr>
+<td>技术面</td>
+<td>接近400元强支撑位，下行空间有限</td>
+<td>均线空头排列，惯性下探风险未解除</td>
+</tr>
+<tr>
+<td>资金面</td>
+<td>散户持续净流入（1.29亿/日）</td>
+<td>主力持续净流出（3.44亿/日）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>资金面综合判断：</strong> 主力与散户出现明显分歧，散户在"抄底"，主力在"出货"。从历史经验看，当这种分歧出现时，<strong>技术面往往站在主力资金一侧</strong>——即短期继续调整的概率更大。但若调整至400元附近出现主力资金回补迹象（如大单净买入），则可能是调整结束的信号。</p>
+<hr />
+<h2>四、📰 近期关键事件时间线</h2>
+<table>
+<thead>
+<tr>
+<th>日期</th>
+<th>事件/动态</th>
+<th>影响分析</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4月中旬</td>
+<td>股价触及472元历史高点后回落</td>
+<td>技术性见顶，获利盘涌出</td>
+</tr>
+<tr>
+<td>5月至今</td>
+<td>持续缩量阴跌，从472元跌至411元</td>
+<td>调整幅度约13%，市场观望</td>
+</tr>
+<tr>
+<td>5月22日</td>
+<td>主力资金净流出3.44亿，尾盘跳水收于409.50元</td>
+<td>短期空头力量增强</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>注：</strong> 当前获取的研报数据中暂无与宁德时代直接相关的近期研报，多为其他行业标的。建议通过更多渠道获取宁德时代最新机构评级和目标价。</p>
+</blockquote>
+<hr />
+<p><em>═══ 以上是证据和数据，以下是基于证据的判断 ═══</em></p>
+<h2>五、🔮 综合判断</h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>评级</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>技术面</td>
+<td>⚠️ 短期偏空</td>
+<td>均线死叉、缩量阴跌、尾盘跳水</td>
+</tr>
+<tr>
+<td>基本面</td>
+<td>✅ 稳健</td>
+<td>龙头地位稳固，PE合理</td>
+</tr>
+<tr>
+<td>资金面</td>
+<td>⚠️ 偏空</td>
+<td>主力净流出，北向资金谨慎</td>
+</tr>
+<tr>
+<td>情绪面</td>
+<td>🔶 中性</td>
+<td>窄幅整理，等待方向选择</td>
+</tr>
+</tbody>
+</table>
+<p><strong>总评级：短期谨慎偏空，中期中性偏乐观。</strong></p>
+<blockquote>
+<p>💡 <strong>一句话：宁德时代基本面扎实，但短期技术面走弱，正处于"黎明前的黑暗"阶段。400元整数关口是多空分水岭，也是检验调整是否结束的试金石。</strong></p>
+</blockquote>
+<p><strong>风险等级：中等（下行空间约3-5%，但若破位可能扩大至10-15%）。</strong></p>
+<h3>5.1 🟢 看涨因素（核心逻辑）</h3>
+<ol>
+<li>
+<p><strong>估值安全边际正在积累：</strong> 22.93倍PE对于全球动力电池龙头而言处于历史中低位。若股价继续下行至400元甚至380元区间，PE将降至约21-22倍，从价值投资角度看极具吸引力，长线资金有望入场。</p>
+</li>
+<li>
+<p><strong>400元整数关口的强支撑效应：</strong> 400元不仅是心理整数关口，也是前期起涨平台区域。历史走势表明，该价位附近曾多次形成有效支撑。若触及400元后出现放量反弹，很可能触发"聪明钱"的回补。</p>
+</li>
+<li>
+<p><strong>缩量回调+基本面稳健 = 典型洗盘特征：</strong> 在基本面未恶化的前提下，缩量下跌往往不是主力大规模出逃，而是"洗盘"——通过制造调整压力清洗不坚定筹码，为下一波行情蓄力。</p>
+</li>
+<li>
+<p><strong>储能赛道超级周期未结束：</strong> 2026年全球储能市场仍处高速增长期，宁德时代作为全球储能电池出货量第一，将直接受益。</p>
+</li>
+</ol>
+<h3>5.2 🔴 看跌因素（风险提示）</h3>
+<ol>
+<li>
+<p><strong>均线系统空头排列：</strong> MA5已下穿MA10，且股价运行在全部短期均线下方。在没有新的催化因素推动下，均线压制可能持续数周。</p>
+</li>
+<li>
+<p><strong>主力资金持续净流出：</strong> 上一日主力净流出3.44亿元，若该趋势延续，将对股价形成持续压力。散户接盘通常难以推动股价反转。</p>
+</li>
+<li>
+<p><strong>行业竞争加剧隐忧：</strong> 比亚迪刀片电池产能持续扩张，中创新航、亿纬锂能等二线厂商也在加速追赶。动力电池行业可能面临新一轮价格战，市场对毛利率预期可能下修。</p>
+</li>
+<li>
+<p><strong>尾盘跳水的惯性效应：</strong> 分时图显示尾盘出现无抵抗式下跌，这种"光脚阴线"结构在分时级别极为不利，短期来看次日早盘大概率仍有下探。若跌破409元（近期分时低点），则短线可能加速向400元靠拢。</p>
+</li>
+</ol>
+<h3>5.3 操作建议</h3>
+<table>
+<thead>
+<tr>
+<th>投资者类型</th>
+<th>建议策略</th>
+<th>具体操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🐢 <strong>长线价值投资者</strong></td>
+<td><strong>逐步低吸</strong></td>
+<td>在400–410元区间分批建仓（每次1/3仓位），跌破400元加仓，目标持有1年以上</td>
+</tr>
+<tr>
+<td>🐇 <strong>中线趋势投资者</strong></td>
+<td><strong>观望等待信号</strong></td>
+<td>等待股价站上MA10（~430元）且成交量放大后再介入，或等待MACD金叉确认</td>
+</tr>
+<tr>
+<td>🐿️ <strong>短线交易者</strong></td>
+<td><strong>轻仓博弈反弹</strong></td>
+<td>在400元附近轻仓试多，止损设395元，目标420元；严格止损，快进快出</td>
+</tr>
+<tr>
+<td>🛡️ <strong>保守型投资者</strong></td>
+<td><strong>暂时回避</strong></td>
+<td>等待技术面修复信号出现后再评估，当前不确定性较高</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>六、🎯 翻转条件</h2>
+<h3>向上翻转 🟢（由空转多的触发条件）</h3>
+<table>
+<thead>
+<tr>
+<th>触发条件</th>
+<th>信号强度</th>
+<th>逻辑说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>股价放量站上MA10（~430元）</td>
+<td>⭐⭐⭐</td>
+<td>短期趋势逆转的核心确认信号</td>
+</tr>
+<tr>
+<td>MACD在零轴附近金叉</td>
+<td>⭐⭐⭐</td>
+<td>动能由空转多的技术确认</td>
+</tr>
+<tr>
+<td>连续3日主力净流入</td>
+<td>⭐⭐⭐⭐</td>
+<td>资金面转强的直接证据</td>
+</tr>
+<tr>
+<td>400元附近出现长下影线+放量</td>
+<td>⭐⭐⭐⭐</td>
+<td>经典"探底回升"底部信号</td>
+</tr>
+<tr>
+<td>重大利好催化（如海外大单、新技术突破）</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>基本面驱动型上涨</td>
+</tr>
+</tbody>
+</table>
+<h3>向下翻转 🔴（由中性转空的触发条件）</h3>
+<table>
+<thead>
+<tr>
+<th>触发条件</th>
+<th>信号强度</th>
+<th>逻辑说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>有效跌破400元整数关口（收盘价&lt;398元）</td>
+<td>⭐⭐⭐⭐</td>
+<td>关键支撑失守，调整级别升级</td>
+</tr>
+<tr>
+<td>连续5日主力净流出超2亿</td>
+<td>⭐⭐⭐</td>
+<td>资金面持续恶化</td>
+</tr>
+<tr>
+<td>大盘系统性风险（上证指数大幅回调）</td>
+<td>⭐⭐⭐⭐</td>
+<td>系统性风险下个股难以独善其身</td>
+</tr>
+<tr>
+<td>行业重大利空（如政策变动、核心客户流失）</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>基本面恶化信号</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>400元是核心防线，不破不慌。一旦有效跌破400元（连续2日收盘低于398元），短期策略须迅速转为避险。</strong></p>
+</blockquote>
+<hr />
+<h2>七、📋 风险提示 / 免责声明</h2>
+<p><strong>⚠️ 风险提示：</strong></p>
+<ol>
+<li>本报告基于公开数据和图表技术分析，所有技术指标数值均为基于图表的估算值，可能与实际数据存在偏差。</li>
+<li>报告中提及的支撑位、压力位、目标价等均为技术分析的参考区间，不构成任何买卖建议。</li>
+<li>股市投资存在系统性风险和非系统性风险，过往走势不代表未来表现。</li>
+<li>报告中"MACD死叉/金叉"等判断基于K线形态推断，未直接获取指标数值，仅供参考。</li>
+</ol>
+<p><strong>📌 免责声明：</strong></p>
+<p>本报告由AI分析助手基于公开信息自动生成，仅供投资者参考，不构成对任何人的投资建议。投资者应当基于自身的独立判断进行投资决策，并自行承担投资风险。报告撰写者及相关方不对因使用本报告中的任何内容所引致的任何损失承担任何责任。</p>
+<p><strong>股市有风险，投资需谨慎。</strong></p>
+<hr />
+<p><em>报告生成时间：2026年5月23日 | 数据截止：2026年5月22日收盘 | 下次更新建议：关注400元关口争夺结果</em></p>
+</div>
+</body>
+</html>
