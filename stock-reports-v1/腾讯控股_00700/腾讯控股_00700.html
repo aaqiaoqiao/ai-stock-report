@@ -3,100 +3,106 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>📊 腾讯控股 (00700.HK) 股票分析报告</title>
+<title>腾讯控股 (00700.HK) 股票分析报告</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 html{font-size:16px;}
 body{
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",
-             "Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
-  line-height:1.85;color:#2c3e50;background:#f5f7fa;
+  font-family:'Noto Serif SC', Georgia, serif;
+  line-height:1.85;color:#c8c3bc;background:#0d0f10;
 }
 .container{max-width:860px;margin:0 auto;padding:30px 24px;}
 
 /* 标题 */
 h1{
-  font-size:1.6em;color:#1a1a2e;border-bottom:3px solid #3498db;
+  font-size:1.6em;color:#d4a574;border-bottom:2px solid rgba(212,165,116,0.3);
   padding-bottom:10px;margin-bottom:6px;font-weight:700;
 }
-h1 .meta{display:block;font-size:0.45em;color:#888;font-weight:400;margin-top:6px;}
+h1 .meta{display:block;font-size:0.45em;color:#6b6560;font-weight:400;margin-top:6px;}
 h2{
-  font-size:1.3em;color:#2980b9;margin-top:2em;margin-bottom:0.8em;
-  padding-left:12px;border-left:4px solid #3498db;font-weight:700;
+  font-size:1.3em;color:#d4a574;margin-top:2em;margin-bottom:0.8em;
+  padding-left:12px;border-left:4px solid #d4a574;font-weight:700;
 }
-h3{font-size:1.1em;color:#34495e;margin-top:1.5em;margin-bottom:0.6em;font-weight:600;}
+h3{font-size:1.1em;color:#f5f0eb;margin-top:1.5em;margin-bottom:0.6em;font-weight:600;}
 
 /* 段落 */
 p{margin-bottom:0.9em;font-size:0.95em;text-align:justify;}
 
-/* 表格 — 报告核心元素 */
+/* 表格 */
 table{
   width:100%;border-collapse:collapse;margin:1.2em 0;font-size:0.88em;
-  border-radius:6px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.08);
+  overflow:hidden;
 }
-thead{background:linear-gradient(135deg,#2980b9,#3498db);}
+thead{background:rgba(212,165,116,0.15);}
 th{
-  color:#fff;font-weight:600;padding:10px 14px;text-align:left;
+  color:#d4a574;font-weight:600;padding:10px 14px;text-align:left;
   font-size:0.95em;letter-spacing:0.3px;
+  border-bottom:2px solid rgba(255,255,255,0.06);
 }
-td{padding:9px 14px;border-bottom:1px solid #ecf0f1;color:#444;}
-tbody tr:nth-child(even){background:#fafbfc;}
-tbody tr:hover{background:#f0f7ff;}
+td{
+  padding:9px 14px;border-bottom:1px solid rgba(255,255,255,0.06);color:#c8c3bc;
+}
+tbody tr:nth-child(even){background:rgba(255,255,255,0.02);}
+tbody tr:hover{background:rgba(212,165,116,0.06);}
 tbody tr:last-child td{border-bottom:none;}
 
 /* 列表 */
 ul,ol{padding-left:1.6em;margin:0.8em 0;font-size:0.9em;line-height:1.75;}
 li{margin-bottom:0.35em;}
-li::marker{color:#3498db;}
+li::marker{color:#d4a574;}
 
 /* 引用块（用于核心判断） */
 blockquote{
-  margin:1.2em 0;padding:14px 20px;background:linear-gradient(135deg,#fef9e7,#fdf2e9);
-  border-left:4px solid #f39c12;border-radius:0 8px 8px 0;
-  color:#7d6608;font-size:0.9em;line-height:1.7;
+  margin:1.2em 0;padding:14px 20px;background:#141618;
+  border-left:4px solid #d4a574;
+  color:#f5f0eb;font-size:0.9em;line-height:1.7;
 }
 blockquote p:last-child{margin-bottom:0;}
 
 /* 代码/折线图 */
 code{
-  background:#f1f3f5;padding:2px 6px;border-radius:4px;
-  font-family:"SF Mono",Monaco,Consolas,monospace;font-size:0.85em;color:#e74c3c;
+  background:rgba(255,255,255,0.05);padding:2px 6px;
+  font-family:'Space Mono', monospace;font-size:0.85em;
+  color:#d4a574;
 }
 pre{
-  background:#1e272e;color:#dcdcdc;border-radius:8px;padding:18px 20px;
+  background:#141618;color:#c8c3bc;padding:18px 20px;
   margin:1.2em 0;overflow-x:auto;font-size:0.82em;line-height:1.6;
-  box-shadow:inset 0 1px 4px rgba(0,0,0,0.15);
+  border:1px solid rgba(255,255,255,0.06);
 }
 pre code{background:none;padding:0;color:inherit;font-size:1em;}
 
 /* 分隔线 */
 hr{
   border:none;height:2px;background:linear-gradient(to right,
-    transparent,#bdc3c7,transparent);margin:2.5em 0;
+    transparent,rgba(255,255,255,0.06),transparent);margin:2.5em 0;
 }
 
 /* 图片 */
-p > img{max-width:100%;height:auto;border-radius:8px;
-  box-shadow:0 2px 12px rgba(0,0,0,0.1);margin:1em auto;display:block;}
+p > img{max-width:100%;height:auto;
+  margin:1em auto;display:block;}
 figure{margin:1.5em 0;text-align:center;}
-figure img{max-width:100%;height:auto;border-radius:8px;
-  box-shadow:0 2px 12px rgba(0,0,0,0.1);}
-figcaption{color:#888;font-size:0.82em;margin-top:8px;font-style:italic;}
+figure img{max-width:100%;height:auto;}
+figcaption{color:#6b6560;font-size:0.82em;font-style:italic;}
 
 /* 强调 */
-strong{color:#1a1a2e;font-weight:600;}
-em{color:#c0392b;}
+strong{color:#f5f0eb;font-weight:600;}
+em{color:#a0706a;}
+
+/* 涨跌颜色 */
+.green,.up{color:#7a9e7e;}
+.red,.down{color:#a0706a;}
 
 /* 链接 */
-a{color:#2980b9;text-decoration:none;border-bottom:1px dotted #2980b9;}
-a:hover{color:#1abc9c;border-bottom-style:solid;}
+a{color:#d4a574;text-decoration:none;border-bottom:1px dotted rgba(212,165,116,0.5);}
+a:hover{color:#f5f0eb;border-bottom-style:solid;}
 
 /* 免责声明 */
 .disclaimer{
-  background:#ecf0f1;border-left:4px solid #95a5a6;
-  padding:14px 18px;margin-top:2.5em;border-radius:0 8px 8px 0;
-  color:#7f8c8d;font-size:0.82em;line-height:1.65;
+  background:#141618;border-left:4px solid #6b6560;
+  padding:14px 18px;margin-top:2.5em;
+  color:#6b6560;font-size:0.82em;line-height:1.65;
 }
 
 /* 响应式 */
@@ -119,12 +125,12 @@ a:hover{color:#1abc9c;border-bottom-style:solid;}
 </head>
 <body>
 <div class="container">
-<h1>📊 腾讯控股 (00700.HK) 股票分析报告</h1>
+<h1>腾讯控股 (00700.HK) 股票分析报告</h1>
 <blockquote>
 <p><strong>分析时间：</strong> 2026年5月23日 13:29 | <strong>当前股价：</strong> 441.40 港元（+0.55%）| <strong>市值：</strong> 约4.02万亿港元</p>
 </blockquote>
 <hr />
-<h2>一、📈 技术面分析</h2>
+<h2>一、 技术面分析</h2>
 <p><img alt="日K线图" src="file:///Users/anchor/Desktop/agent集群/stock_data_output/00700_20260523_1329/kline_em.png" /><br />
 <em>图1：腾讯控股日K线图（2026年2月-5月），来源：东方财富</em></p>
 <p><img alt="分时图" src="file:///Users/anchor/Desktop/agent集群/stock_data_output/00700_20260523_1329/kline_intraday.png" /><br />
@@ -263,7 +269,7 @@ a:hover{color:#1abc9c;border-bottom-style:solid;}
 </table>
 <p><strong>技术面总体评级：</strong> 短期超跌反弹信号出现（锤子线+主力小幅净流入），但中期空头趋势未改。属于<strong>"短期看反弹、中期仍谨慎"</strong>的技术格局。关键观察点在于股价能否在423-430区间构筑有效支撑并放量站回MA5以上。</p>
 <hr />
-<h2>二、💰 基本面分析</h2>
+<h2>二、 基本面分析</h2>
 <h3>2.1 核心估值数据</h3>
 <table>
 <thead>
@@ -323,7 +329,7 @@ a:hover{color:#1abc9c;border-bottom-style:solid;}
 - <strong>背离原因：</strong> 市场情绪驱动的超调 + 宏观不确定性折价 + 缺乏短期催化剂</p>
 <p>这种背离往往为中长期投资者提供了左侧布局窗口，但短期趋势交易者需要关注技术面的确认信号。</p>
 <hr />
-<h2>三、💵 资金流向分析</h2>
+<h2>三、 资金流向分析</h2>
 <h3>3.1 主力资金动向</h3>
 <table>
 <thead>
@@ -348,14 +354,14 @@ a:hover{color:#1abc9c;border-bottom-style:solid;}
 <p>5月22日的数据显示主力资金出现<strong>净流入4.04亿港元</strong>，这是近期资金面的积极信号。有趣的是，当日散户资金也同步净流入4.10亿港元，出现了"主力与散户同步买入"的格局。这种共振通常发生在股价已经历较大幅度调整之后，主流资金和散户同时认为当前价位具备吸引力。</p>
 <p>不过需要警惕的是，仅1天的资金流入还不足以确认趋势反转。历史数据显示，单一交易日的主力流入在空头行情中往往对应"抄底资金试探"，后续可能面临二次确认或止损出局的波动。持续观察主力资金能否<strong>连续3-5个交易日净流入</strong>，是判断资金面是否完成筑底的关键指标。</p>
 <hr />
-<h2>四、📰 近期关键事件时间线</h2>
+<h2>四、 近期关键事件时间线</h2>
 <blockquote>
 <p><strong>说明：</strong> 本次数据采集中，东方财富API返回的研报列表内的报告均非腾讯控股相关（涉及机器人、军工、化工、化肥等行业的其他上市公司）。短期内无针对腾讯控股的重大公开事件或内部变动信息。该阶段股价波动主要由市场整体情绪和技术面驱动，而非单一事件催化。</p>
 </blockquote>
 <p>建议投资者关注后续可能的催化剂：Q1财报发布（如有）、游戏版号审批动态、微信生态商业化进展、以及港股通资金流向变化。</p>
 <hr />
 <p><em>═══ 以上是证据和数据，以下是基于证据的判断 ═══</em></p>
-<h2>五、🔮 综合判断</h2>
+<h2>五、 综合判断</h2>
 <h3>总评级：🟡 短期谨慎偏多，中期维持观望</h3>
 <p><strong>一句话总结：</strong> 技术面出现超跌反弹信号（锤子线+主力试探性流入），但中期空头趋势尚未扭转，当前属于"反弹博弈"窗口而非"趋势翻转"节点。风险等级：<strong>中等偏高。</strong></p>
 <hr />
@@ -432,7 +438,7 @@ a:hover{color:#1abc9c;border-bottom-style:solid;}
 <p><strong>A/H对比：</strong> 腾讯控股仅在港交所上市，无A股直接可比标的。投资者可参考恒生科技指数走势和南向资金流向作为辅助参考。</p>
 </blockquote>
 <hr />
-<h2>六、🎯 翻转条件</h2>
+<h2>六、 翻转条件</h2>
 <h3>向上翻转 🟢（看多确认信号）</h3>
 <table>
 <thead>
@@ -508,7 +514,7 @@ a:hover{color:#1abc9c;border-bottom-style:solid;}
 </tbody>
 </table>
 <hr />
-<h2>七、📋 风险提示 / 免责声明</h2>
+<h2>七、 风险提示 / 免责声明</h2>
 <p>⚠️ <strong>本报告由AI生成，仅供参考，不构成投资建议。</strong> 股市有风险，投资需谨慎。本报告中的技术分析和数据均来源于公开信息，可能存在数据延迟或误差。任何投资决策应基于投资者自身的风险承受能力和判断，必要时请咨询专业投资顾问。</p>
 <p><strong>主要风险提示：</strong><br />
 - 技术分析具有滞后性和概率性，历史走势不代表未来表现<br />

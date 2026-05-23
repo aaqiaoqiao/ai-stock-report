@@ -3,100 +3,106 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>📊 贵州茅台 (600519.SH) 股票分析报告</title>
+<title>贵州茅台 (600519.SH) 股票分析报告</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 html{font-size:16px;}
 body{
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",
-             "Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
-  line-height:1.85;color:#2c3e50;background:#f5f7fa;
+  font-family:'Noto Serif SC', Georgia, serif;
+  line-height:1.85;color:#c8c3bc;background:#0d0f10;
 }
 .container{max-width:860px;margin:0 auto;padding:30px 24px;}
 
 /* 标题 */
 h1{
-  font-size:1.6em;color:#1a1a2e;border-bottom:3px solid #3498db;
+  font-size:1.6em;color:#d4a574;border-bottom:2px solid rgba(212,165,116,0.3);
   padding-bottom:10px;margin-bottom:6px;font-weight:700;
 }
-h1 .meta{display:block;font-size:0.45em;color:#888;font-weight:400;margin-top:6px;}
+h1 .meta{display:block;font-size:0.45em;color:#6b6560;font-weight:400;margin-top:6px;}
 h2{
-  font-size:1.3em;color:#2980b9;margin-top:2em;margin-bottom:0.8em;
-  padding-left:12px;border-left:4px solid #3498db;font-weight:700;
+  font-size:1.3em;color:#d4a574;margin-top:2em;margin-bottom:0.8em;
+  padding-left:12px;border-left:4px solid #d4a574;font-weight:700;
 }
-h3{font-size:1.1em;color:#34495e;margin-top:1.5em;margin-bottom:0.6em;font-weight:600;}
+h3{font-size:1.1em;color:#f5f0eb;margin-top:1.5em;margin-bottom:0.6em;font-weight:600;}
 
 /* 段落 */
 p{margin-bottom:0.9em;font-size:0.95em;text-align:justify;}
 
-/* 表格 — 报告核心元素 */
+/* 表格 */
 table{
   width:100%;border-collapse:collapse;margin:1.2em 0;font-size:0.88em;
-  border-radius:6px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.08);
+  overflow:hidden;
 }
-thead{background:linear-gradient(135deg,#2980b9,#3498db);}
+thead{background:rgba(212,165,116,0.15);}
 th{
-  color:#fff;font-weight:600;padding:10px 14px;text-align:left;
+  color:#d4a574;font-weight:600;padding:10px 14px;text-align:left;
   font-size:0.95em;letter-spacing:0.3px;
+  border-bottom:2px solid rgba(255,255,255,0.06);
 }
-td{padding:9px 14px;border-bottom:1px solid #ecf0f1;color:#444;}
-tbody tr:nth-child(even){background:#fafbfc;}
-tbody tr:hover{background:#f0f7ff;}
+td{
+  padding:9px 14px;border-bottom:1px solid rgba(255,255,255,0.06);color:#c8c3bc;
+}
+tbody tr:nth-child(even){background:rgba(255,255,255,0.02);}
+tbody tr:hover{background:rgba(212,165,116,0.06);}
 tbody tr:last-child td{border-bottom:none;}
 
 /* 列表 */
 ul,ol{padding-left:1.6em;margin:0.8em 0;font-size:0.9em;line-height:1.75;}
 li{margin-bottom:0.35em;}
-li::marker{color:#3498db;}
+li::marker{color:#d4a574;}
 
 /* 引用块（用于核心判断） */
 blockquote{
-  margin:1.2em 0;padding:14px 20px;background:linear-gradient(135deg,#fef9e7,#fdf2e9);
-  border-left:4px solid #f39c12;border-radius:0 8px 8px 0;
-  color:#7d6608;font-size:0.9em;line-height:1.7;
+  margin:1.2em 0;padding:14px 20px;background:#141618;
+  border-left:4px solid #d4a574;
+  color:#f5f0eb;font-size:0.9em;line-height:1.7;
 }
 blockquote p:last-child{margin-bottom:0;}
 
 /* 代码/折线图 */
 code{
-  background:#f1f3f5;padding:2px 6px;border-radius:4px;
-  font-family:"SF Mono",Monaco,Consolas,monospace;font-size:0.85em;color:#e74c3c;
+  background:rgba(255,255,255,0.05);padding:2px 6px;
+  font-family:'Space Mono', monospace;font-size:0.85em;
+  color:#d4a574;
 }
 pre{
-  background:#1e272e;color:#dcdcdc;border-radius:8px;padding:18px 20px;
+  background:#141618;color:#c8c3bc;padding:18px 20px;
   margin:1.2em 0;overflow-x:auto;font-size:0.82em;line-height:1.6;
-  box-shadow:inset 0 1px 4px rgba(0,0,0,0.15);
+  border:1px solid rgba(255,255,255,0.06);
 }
 pre code{background:none;padding:0;color:inherit;font-size:1em;}
 
 /* 分隔线 */
 hr{
   border:none;height:2px;background:linear-gradient(to right,
-    transparent,#bdc3c7,transparent);margin:2.5em 0;
+    transparent,rgba(255,255,255,0.06),transparent);margin:2.5em 0;
 }
 
 /* 图片 */
-p > img{max-width:100%;height:auto;border-radius:8px;
-  box-shadow:0 2px 12px rgba(0,0,0,0.1);margin:1em auto;display:block;}
+p > img{max-width:100%;height:auto;
+  margin:1em auto;display:block;}
 figure{margin:1.5em 0;text-align:center;}
-figure img{max-width:100%;height:auto;border-radius:8px;
-  box-shadow:0 2px 12px rgba(0,0,0,0.1);}
-figcaption{color:#888;font-size:0.82em;margin-top:8px;font-style:italic;}
+figure img{max-width:100%;height:auto;}
+figcaption{color:#6b6560;font-size:0.82em;font-style:italic;}
 
 /* 强调 */
-strong{color:#1a1a2e;font-weight:600;}
-em{color:#c0392b;}
+strong{color:#f5f0eb;font-weight:600;}
+em{color:#a0706a;}
+
+/* 涨跌颜色 */
+.green,.up{color:#7a9e7e;}
+.red,.down{color:#a0706a;}
 
 /* 链接 */
-a{color:#2980b9;text-decoration:none;border-bottom:1px dotted #2980b9;}
-a:hover{color:#1abc9c;border-bottom-style:solid;}
+a{color:#d4a574;text-decoration:none;border-bottom:1px dotted rgba(212,165,116,0.5);}
+a:hover{color:#f5f0eb;border-bottom-style:solid;}
 
 /* 免责声明 */
 .disclaimer{
-  background:#ecf0f1;border-left:4px solid #95a5a6;
-  padding:14px 18px;margin-top:2.5em;border-radius:0 8px 8px 0;
-  color:#7f8c8d;font-size:0.82em;line-height:1.65;
+  background:#141618;border-left:4px solid #6b6560;
+  padding:14px 18px;margin-top:2.5em;
+  color:#6b6560;font-size:0.82em;line-height:1.65;
 }
 
 /* 响应式 */
@@ -119,12 +125,12 @@ a:hover{color:#1abc9c;border-bottom-style:solid;}
 </head>
 <body>
 <div class="container">
-<h1>📊 贵州茅台 (600519.SH) 股票分析报告</h1>
+<h1>贵州茅台 (600519.SH) 股票分析报告</h1>
 <blockquote>
 <p><strong>分析时间：</strong> 2026年5月23日 13:29 | <strong>当前股价：</strong> 1290.20元（较前日-20.80元，-1.59%）| <strong>市值：</strong> ~1.62万亿</p>
 </blockquote>
 <hr />
-<h2>一、📈 技术面分析</h2>
+<h2>一、 技术面分析</h2>
 <p><img alt="日K线图" src="file:///Users/anchor/Desktop/agent集群/stock_data_output/600519_20260523_1329/kline_em.png" /><br />
 <em>图1：贵州茅台日K线图（截至2026-05-22）</em></p>
 <p><img alt="分时图" src="file:///Users/anchor/Desktop/agent集群/stock_data_output/600519_20260523_1329/kline_intraday.png" /><br />
@@ -271,7 +277,7 @@ a:hover{color:#1abc9c;border-bottom-style:solid;}
 </table>
 <p><strong>技术面总体评级：🔴 空头趋势延续中，超跌但未止跌</strong></p>
 <hr />
-<h2>二、💰 基本面分析</h2>
+<h2>二、 基本面分析</h2>
 <h3>2.1 核心财务数据（2026年Q1）</h3>
 <table>
 <thead>
@@ -395,7 +401,7 @@ a:hover{color:#1abc9c;border-bottom-style:solid;}
 <p><strong>这不是基本面恶化的价值毁灭，而是市场情绪和增长预期的重新定价。</strong></p>
 </blockquote>
 <hr />
-<h2>三、💵 资金流向分析</h2>
+<h2>三、 资金流向分析</h2>
 <h3>3.1 主力资金动向</h3>
 <table>
 <thead>
@@ -456,7 +462,7 @@ a:hover{color:#1abc9c;border-bottom-style:solid;}
 </table>
 <p><strong>资金面判断：</strong> 买方力量明显薄弱，卖盘来自机构、外资和散户三方共振。公司回购金额（月均4亿）相比日均成交额杯水车薪，暂时无法形成实质性支撑。资金面整体对多头不利，需要等待主力资金转向流入信号。</p>
 <hr />
-<h2>四、📰 近期关键事件时间线</h2>
+<h2>四、 近期关键事件时间线</h2>
 <table>
 <thead>
 <tr>
@@ -515,7 +521,7 @@ a:hover{color:#1abc9c;border-bottom-style:solid;}
 </table>
 <hr />
 <p><em>═══ 以上是证据和数据，以下是基于证据的判断 ═══</em></p>
-<h2>五、🔮 综合判断</h2>
+<h2>五、 综合判断</h2>
 <h3>总评级：🟡 <strong>谨慎观望，等待止跌信号</strong></h3>
 <blockquote>
 <p>一句话总结：茅台基本面稳健（Q1日赚3亿、PE仅14.83倍），但技术面处于空头加速赶底阶段、资金面主力持续出逃，短期风险大于机会。已持仓者不宜在恐慌中割肉，观望者应等待明确止跌信号（地量+长下影线/阳包阴）再考虑介入。</p>
@@ -582,7 +588,7 @@ a:hover{color:#1abc9c;border-bottom-style:solid;}
 - 茅台为A股唯一标的，无A/H价差考量，无期权策略适用；<br />
 - 当前PE 14.83倍从历史角度看已属低估，若继续下跌至1200元（PE约13.8倍），长期投资者可考虑大举建仓。</p>
 <hr />
-<h2>六、🎯 翻转条件</h2>
+<h2>六、 翻转条件</h2>
 <h3>向上翻转 🟢（什么信号出现后可以转为看多）</h3>
 <table>
 <thead>
@@ -642,7 +648,7 @@ a:hover{color:#1abc9c;border-bottom-style:solid;}
 </tbody>
 </table>
 <hr />
-<h2>七、📋 风险提示 / 免责声明</h2>
+<h2>七、 风险提示 / 免责声明</h2>
 <h3>⚠️ 重要风险提示</h3>
 <ol>
 <li><strong>市场风险：</strong> 股票市场存在系统性风险，宏观经济波动、政策变化、国际局势等均可能对股价产生重大影响。当前全球宏观环境复杂多变，任何"黑天鹅"事件都可能改变市场格局；</li>

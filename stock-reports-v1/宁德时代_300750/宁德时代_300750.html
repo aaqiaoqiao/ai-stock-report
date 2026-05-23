@@ -3,100 +3,106 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>📊 宁德时代 (300750.SZ) 股票分析报告</title>
+<title>宁德时代 (300750.SZ) 股票分析报告</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 html{font-size:16px;}
 body{
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",
-             "Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
-  line-height:1.85;color:#2c3e50;background:#f5f7fa;
+  font-family:'Noto Serif SC', Georgia, serif;
+  line-height:1.85;color:#c8c3bc;background:#0d0f10;
 }
 .container{max-width:860px;margin:0 auto;padding:30px 24px;}
 
 /* 标题 */
 h1{
-  font-size:1.6em;color:#1a1a2e;border-bottom:3px solid #3498db;
+  font-size:1.6em;color:#d4a574;border-bottom:2px solid rgba(212,165,116,0.3);
   padding-bottom:10px;margin-bottom:6px;font-weight:700;
 }
-h1 .meta{display:block;font-size:0.45em;color:#888;font-weight:400;margin-top:6px;}
+h1 .meta{display:block;font-size:0.45em;color:#6b6560;font-weight:400;margin-top:6px;}
 h2{
-  font-size:1.3em;color:#2980b9;margin-top:2em;margin-bottom:0.8em;
-  padding-left:12px;border-left:4px solid #3498db;font-weight:700;
+  font-size:1.3em;color:#d4a574;margin-top:2em;margin-bottom:0.8em;
+  padding-left:12px;border-left:4px solid #d4a574;font-weight:700;
 }
-h3{font-size:1.1em;color:#34495e;margin-top:1.5em;margin-bottom:0.6em;font-weight:600;}
+h3{font-size:1.1em;color:#f5f0eb;margin-top:1.5em;margin-bottom:0.6em;font-weight:600;}
 
 /* 段落 */
 p{margin-bottom:0.9em;font-size:0.95em;text-align:justify;}
 
-/* 表格 — 报告核心元素 */
+/* 表格 */
 table{
   width:100%;border-collapse:collapse;margin:1.2em 0;font-size:0.88em;
-  border-radius:6px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.08);
+  overflow:hidden;
 }
-thead{background:linear-gradient(135deg,#2980b9,#3498db);}
+thead{background:rgba(212,165,116,0.15);}
 th{
-  color:#fff;font-weight:600;padding:10px 14px;text-align:left;
+  color:#d4a574;font-weight:600;padding:10px 14px;text-align:left;
   font-size:0.95em;letter-spacing:0.3px;
+  border-bottom:2px solid rgba(255,255,255,0.06);
 }
-td{padding:9px 14px;border-bottom:1px solid #ecf0f1;color:#444;}
-tbody tr:nth-child(even){background:#fafbfc;}
-tbody tr:hover{background:#f0f7ff;}
+td{
+  padding:9px 14px;border-bottom:1px solid rgba(255,255,255,0.06);color:#c8c3bc;
+}
+tbody tr:nth-child(even){background:rgba(255,255,255,0.02);}
+tbody tr:hover{background:rgba(212,165,116,0.06);}
 tbody tr:last-child td{border-bottom:none;}
 
 /* 列表 */
 ul,ol{padding-left:1.6em;margin:0.8em 0;font-size:0.9em;line-height:1.75;}
 li{margin-bottom:0.35em;}
-li::marker{color:#3498db;}
+li::marker{color:#d4a574;}
 
 /* 引用块（用于核心判断） */
 blockquote{
-  margin:1.2em 0;padding:14px 20px;background:linear-gradient(135deg,#fef9e7,#fdf2e9);
-  border-left:4px solid #f39c12;border-radius:0 8px 8px 0;
-  color:#7d6608;font-size:0.9em;line-height:1.7;
+  margin:1.2em 0;padding:14px 20px;background:#141618;
+  border-left:4px solid #d4a574;
+  color:#f5f0eb;font-size:0.9em;line-height:1.7;
 }
 blockquote p:last-child{margin-bottom:0;}
 
 /* 代码/折线图 */
 code{
-  background:#f1f3f5;padding:2px 6px;border-radius:4px;
-  font-family:"SF Mono",Monaco,Consolas,monospace;font-size:0.85em;color:#e74c3c;
+  background:rgba(255,255,255,0.05);padding:2px 6px;
+  font-family:'Space Mono', monospace;font-size:0.85em;
+  color:#d4a574;
 }
 pre{
-  background:#1e272e;color:#dcdcdc;border-radius:8px;padding:18px 20px;
+  background:#141618;color:#c8c3bc;padding:18px 20px;
   margin:1.2em 0;overflow-x:auto;font-size:0.82em;line-height:1.6;
-  box-shadow:inset 0 1px 4px rgba(0,0,0,0.15);
+  border:1px solid rgba(255,255,255,0.06);
 }
 pre code{background:none;padding:0;color:inherit;font-size:1em;}
 
 /* 分隔线 */
 hr{
   border:none;height:2px;background:linear-gradient(to right,
-    transparent,#bdc3c7,transparent);margin:2.5em 0;
+    transparent,rgba(255,255,255,0.06),transparent);margin:2.5em 0;
 }
 
 /* 图片 */
-p > img{max-width:100%;height:auto;border-radius:8px;
-  box-shadow:0 2px 12px rgba(0,0,0,0.1);margin:1em auto;display:block;}
+p > img{max-width:100%;height:auto;
+  margin:1em auto;display:block;}
 figure{margin:1.5em 0;text-align:center;}
-figure img{max-width:100%;height:auto;border-radius:8px;
-  box-shadow:0 2px 12px rgba(0,0,0,0.1);}
-figcaption{color:#888;font-size:0.82em;margin-top:8px;font-style:italic;}
+figure img{max-width:100%;height:auto;}
+figcaption{color:#6b6560;font-size:0.82em;font-style:italic;}
 
 /* 强调 */
-strong{color:#1a1a2e;font-weight:600;}
-em{color:#c0392b;}
+strong{color:#f5f0eb;font-weight:600;}
+em{color:#a0706a;}
+
+/* 涨跌颜色 */
+.green,.up{color:#7a9e7e;}
+.red,.down{color:#a0706a;}
 
 /* 链接 */
-a{color:#2980b9;text-decoration:none;border-bottom:1px dotted #2980b9;}
-a:hover{color:#1abc9c;border-bottom-style:solid;}
+a{color:#d4a574;text-decoration:none;border-bottom:1px dotted rgba(212,165,116,0.5);}
+a:hover{color:#f5f0eb;border-bottom-style:solid;}
 
 /* 免责声明 */
 .disclaimer{
-  background:#ecf0f1;border-left:4px solid #95a5a6;
-  padding:14px 18px;margin-top:2.5em;border-radius:0 8px 8px 0;
-  color:#7f8c8d;font-size:0.82em;line-height:1.65;
+  background:#141618;border-left:4px solid #6b6560;
+  padding:14px 18px;margin-top:2.5em;
+  color:#6b6560;font-size:0.82em;line-height:1.65;
 }
 
 /* 响应式 */
@@ -119,12 +125,12 @@ a:hover{color:#1abc9c;border-bottom-style:solid;}
 </head>
 <body>
 <div class="container">
-<h1>📊 宁德时代 (300750.SZ) 股票分析报告</h1>
+<h1>宁德时代 (300750.SZ) 股票分析报告</h1>
 <blockquote>
 <p><strong>分析时间：</strong> 2026年5月23日 13:30 | <strong>当前股价：</strong> 411.16元（-0.11%）| <strong>市值：</strong> 约1.90万亿 | <strong>市盈率(TTM)：</strong> 22.93</p>
 </blockquote>
 <hr />
-<h2>一、📈 技术面分析</h2>
+<h2>一、 技术面分析</h2>
 <p><img alt="日K线图" src="kline_em.png" /><br />
 <em>图1：宁德时代日K线图（2026年2月底–5月22日）</em></p>
 <p><img alt="分时图" src="kline_intraday.png" /><br />
@@ -272,7 +278,7 @@ a:hover{color:#1abc9c;border-bottom-style:solid;}
 </table>
 <p><strong>技术面综合评级：短期偏空（⭐⭐），中期中性（⭐⭐⭐）。</strong></p>
 <hr />
-<h2>二、💰 基本面分析</h2>
+<h2>二、 基本面分析</h2>
 <h3>2.1 核心财务数据</h3>
 <table>
 <thead>
@@ -341,7 +347,7 @@ a:hover{color:#1abc9c;border-bottom-style:solid;}
 <li><strong>背离解读：</strong> 这种"好公司+弱股价"的组合，往往出现在<strong>中期调整的末期</strong>。基本面优秀的公司在技术调整到位后，通常会迎来新一轮资金回补。但调整的时间和幅度取决于市场整体情绪和资金面变化。</li>
 </ul>
 <hr />
-<h2>三、💵 资金流向分析</h2>
+<h2>三、 资金流向分析</h2>
 <h3>3.1 主力资金动向</h3>
 <table>
 <thead>
@@ -394,7 +400,7 @@ a:hover{color:#1abc9c;border-bottom-style:solid;}
 </table>
 <p><strong>资金面综合判断：</strong> 主力与散户出现明显分歧，散户在"抄底"，主力在"出货"。从历史经验看，当这种分歧出现时，<strong>技术面往往站在主力资金一侧</strong>——即短期继续调整的概率更大。但若调整至400元附近出现主力资金回补迹象（如大单净买入），则可能是调整结束的信号。</p>
 <hr />
-<h2>四、📰 近期关键事件时间线</h2>
+<h2>四、 近期关键事件时间线</h2>
 <table>
 <thead>
 <tr>
@@ -426,7 +432,7 @@ a:hover{color:#1abc9c;border-bottom-style:solid;}
 </blockquote>
 <hr />
 <p><em>═══ 以上是证据和数据，以下是基于证据的判断 ═══</em></p>
-<h2>五、🔮 综合判断</h2>
+<h2>五、 综合判断</h2>
 <table>
 <thead>
 <tr>
@@ -526,7 +532,7 @@ a:hover{color:#1abc9c;border-bottom-style:solid;}
 </tbody>
 </table>
 <hr />
-<h2>六、🎯 翻转条件</h2>
+<h2>六、 翻转条件</h2>
 <h3>向上翻转 🟢（由空转多的触发条件）</h3>
 <table>
 <thead>
@@ -600,7 +606,7 @@ a:hover{color:#1abc9c;border-bottom-style:solid;}
 <p><strong>400元是核心防线，不破不慌。一旦有效跌破400元（连续2日收盘低于398元），短期策略须迅速转为避险。</strong></p>
 </blockquote>
 <hr />
-<h2>七、📋 风险提示 / 免责声明</h2>
+<h2>七、 风险提示 / 免责声明</h2>
 <p><strong>⚠️ 风险提示：</strong></p>
 <ol>
 <li>本报告基于公开数据和图表技术分析，所有技术指标数值均为基于图表的估算值，可能与实际数据存在偏差。</li>

@@ -5,27 +5,129 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>阿里巴巴(09988.HK) 股票分析报告</title>
 <style>
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; max-width: 960px; margin: 0 auto; padding: 20px; line-height: 1.8; color: #333; background: #fff; }
-  h1 { color: #1a1a2e; border-bottom: 3px solid #e94560; padding-bottom: 12px; }
-  h2 { color: #16213e; border-bottom: 2px solid #0f3460; padding-bottom: 8px; margin-top: 36px; }
-  h3 { color: #0f3460; margin-top: 24px; }
-  blockquote { border-left: 4px solid #e94560; padding: 12px 20px; background: #fff5f5; margin: 16px 0; }
-  table { border-collapse: collapse; width: 100%; margin: 16px 0; }
-  th, td { border: 1px solid #ddd; padding: 10px 14px; text-align: left; }
-  th { background: #0f3460; color: white; font-weight: 600; }
-  tr:nth-child(even) { background: #f8f9fa; }
-  img { max-width: 100%; height: auto; border: 1px solid #eee; border-radius: 4px; margin: 12px 0; }
-  hr { border: none; border-top: 2px dashed #ccc; margin: 32px 0; }
-  .footer { text-align: center; color: #999; font-size: 13px; margin-top: 40px; }
+*{margin:0;padding:0;box-sizing:border-box;}
+html{font-size:16px;}
+body{
+  font-family:'Noto Serif SC', Georgia, serif;
+  line-height:1.85;color:#c8c3bc;background:#0d0f10;
+}
+.container{max-width:860px;margin:0 auto;padding:30px 24px;}
+
+/* 标题 */
+h1{
+  font-size:1.6em;color:#d4a574;border-bottom:2px solid rgba(212,165,116,0.3);
+  padding-bottom:10px;margin-bottom:6px;font-weight:700;
+}
+h1 .meta{display:block;font-size:0.45em;color:#6b6560;font-weight:400;margin-top:6px;}
+h2{
+  font-size:1.3em;color:#d4a574;margin-top:2em;margin-bottom:0.8em;
+  padding-left:12px;border-left:4px solid #d4a574;font-weight:700;
+}
+h3{font-size:1.1em;color:#f5f0eb;margin-top:1.5em;margin-bottom:0.6em;font-weight:600;}
+
+/* 段落 */
+p{margin-bottom:0.9em;font-size:0.95em;text-align:justify;}
+
+/* 表格 */
+table{
+  width:100%;border-collapse:collapse;margin:1.2em 0;font-size:0.88em;
+  overflow:hidden;
+}
+thead{background:rgba(212,165,116,0.15);}
+th{
+  color:#d4a574;font-weight:600;padding:10px 14px;text-align:left;
+  font-size:0.95em;letter-spacing:0.3px;
+  border-bottom:2px solid rgba(255,255,255,0.06);
+}
+td{
+  padding:9px 14px;border-bottom:1px solid rgba(255,255,255,0.06);color:#c8c3bc;
+}
+tbody tr:nth-child(even){background:rgba(255,255,255,0.02);}
+tbody tr:hover{background:rgba(212,165,116,0.06);}
+tbody tr:last-child td{border-bottom:none;}
+
+/* 列表 */
+ul,ol{padding-left:1.6em;margin:0.8em 0;font-size:0.9em;line-height:1.75;}
+li{margin-bottom:0.35em;}
+li::marker{color:#d4a574;}
+
+/* 引用块（用于核心判断） */
+blockquote{
+  margin:1.2em 0;padding:14px 20px;background:#141618;
+  border-left:4px solid #d4a574;
+  color:#f5f0eb;font-size:0.9em;line-height:1.7;
+}
+blockquote p:last-child{margin-bottom:0;}
+
+/* 代码/折线图 */
+code{
+  background:rgba(255,255,255,0.05);padding:2px 6px;
+  font-family:'Space Mono', monospace;font-size:0.85em;
+  color:#d4a574;
+}
+pre{
+  background:#141618;color:#c8c3bc;padding:18px 20px;
+  margin:1.2em 0;overflow-x:auto;font-size:0.82em;line-height:1.6;
+  border:1px solid rgba(255,255,255,0.06);
+}
+pre code{background:none;padding:0;color:inherit;font-size:1em;}
+
+/* 分隔线 */
+hr{
+  border:none;height:2px;background:linear-gradient(to right,
+    transparent,rgba(255,255,255,0.06),transparent);margin:2.5em 0;
+}
+
+/* 图片 */
+p > img{max-width:100%;height:auto;
+  margin:1em auto;display:block;}
+figure{margin:1.5em 0;text-align:center;}
+figure img{max-width:100%;height:auto;}
+figcaption{color:#6b6560;font-size:0.82em;font-style:italic;}
+
+/* 强调 */
+strong{color:#f5f0eb;font-weight:600;}
+em{color:#a0706a;}
+
+/* 涨跌颜色 */
+.green,.up{color:#7a9e7e;}
+.red,.down{color:#a0706a;}
+
+/* 链接 */
+a{color:#d4a574;text-decoration:none;border-bottom:1px dotted rgba(212,165,116,0.5);}
+a:hover{color:#f5f0eb;border-bottom-style:solid;}
+
+/* 免责声明 */
+.disclaimer{
+  background:#141618;border-left:4px solid #6b6560;
+  padding:14px 18px;margin-top:2.5em;
+  color:#6b6560;font-size:0.82em;line-height:1.65;
+}
+
+/* 响应式 */
+@media(max-width:640px){
+  .container{padding:16px 12px;}
+  h1{font-size:1.35em;}
+  table{font-size:0.78em;}
+  th,td{padding:7px 8px;}
+}
+
+/* 打印优化 */
+@media print{
+  body{background:#fff;color:#000;}
+  .container{max-width:100%;padding:0;}
+  table{page-break-inside:avoid;}
+  h2{page-break-after:avoid;}
+}
 </style>
 </head>
 <body>
-<h1>📊 阿里巴巴-W (09988.HK) 股票分析报告</h1>
+<h1>阿里巴巴-W (09988.HK) 股票分析报告</h1>
 <blockquote>
 <p><strong>分析时间：</strong> 2026年5月23日 13:29 | <strong>当前股价：</strong> 127.00 港元（+0.79%，较前收126.00上涨）| <strong>市值：</strong> 约24,375亿港元</p>
 </blockquote>
 <hr />
-<h2>一、📈 技术面分析</h2>
+<h2>一、 技术面分析</h2>
 <p><img alt="日K线图" src="kline_em.png" /><br />
 <em>图1：阿里巴巴09988.HK近三个月日K线走势图</em></p>
 <p><img alt="分时图" src="kline_intraday.png" /><br />
@@ -169,7 +271,7 @@
 </table>
 <p><strong>技术面综合评级：🔴 偏空（消极），短线风险大于机会。</strong></p>
 <hr />
-<h2>二、💰 基本面分析</h2>
+<h2>二、 基本面分析</h2>
 <h3>2.1 核心财务数据</h3>
 <p>由于summary.json中仅包含有限的基本面快照数据，以下展示当前可获得的核心估值指标：</p>
 <table>
@@ -221,7 +323,7 @@
 <h3>2.3 研报覆盖</h3>
 <p>本次数据抓取返回的5份券商研报均非阿里巴巴直接研报（系统接口匹配偏差），故<strong>暂无针对阿里巴巴的最新直接研报摘要</strong>。建议投资者关注即将发布的季度财报及主流券商（如摩根士丹利、高盛、中信证券等）对阿里巴巴的覆盖报告。</p>
 <hr />
-<h2>三、💵 资金流向分析</h2>
+<h2>三、 资金流向分析</h2>
 <h3>3.1 主力资金动向</h3>
 <table>
 <thead>
@@ -272,7 +374,7 @@
 </table>
 <p><strong>资金面综合判断：</strong> 资金面呈现"中性偏多但力度不足"的特征。主力有逢低吸筹迹象，但规模不足以支撑趋势逆转。如果后续主力资金持续净流入且成交量放大配合股价企稳，才构成较可靠的底部信号。</p>
 <hr />
-<h2>四、📰 近期关键事件时间线</h2>
+<h2>四、 近期关键事件时间线</h2>
 <table>
 <thead>
 <tr>
@@ -319,7 +421,7 @@
 </blockquote>
 <hr />
 <p><em>═══ 以上是证据和数据，以下是基于证据的判断 ═══</em></p>
-<h2>五、🔮 综合判断</h2>
+<h2>五、 综合判断</h2>
 <h3>总体研判</h3>
 <p><strong>综合评级：⚠️ 谨慎偏空（短期看跌，中期等待方向选择）</strong></p>
 <p>阿里巴巴当前处于一轮深度回调之后的<strong>筑底震荡阶段</strong>，但技术面尚未发出明确的底部确认信号。短期来看，股价自5月20日反弹遇阻后连续走弱，今日盘中虽有小幅反弹但尾盘回落，上攻动能不足，预计短线仍有下探125-127港元支撑区的压力。中期而言，除非出现重大基本面催化剂（如超预期财报、大规模回购、行业政策利好等），否则股价在119-142港元区间内继续震荡的概率较大。</p>
@@ -397,7 +499,7 @@
   - 若跌破125港元 → 看跌至119港元，应考虑止损<br />
   - 若放量站上136-138港元（MA30）→ 趋势转多，可加仓做多</p>
 <hr />
-<h2>六、🎯 翻转条件</h2>
+<h2>六、 翻转条件</h2>
 <h3>向上翻转 🟢（看涨反转信号）</h3>
 <table>
 <thead>
@@ -473,7 +575,7 @@
 </tbody>
 </table>
 <hr />
-<h2>七、📋 风险提示 / 免责声明</h2>
+<h2>七、 风险提示 / 免责声明</h2>
 <h3>⚠️ 重要风险提示</h3>
 <ol>
 <li>
