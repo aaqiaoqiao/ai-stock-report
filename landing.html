@@ -3,455 +3,253 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI 选股日报 — 2026年5月23日</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Noto+Serif+SC:wght@400;600;700;900&display=swap" rel="stylesheet">
+<title>AI选股日报 — 2026年5月23日</title>
 <style>
-  :root {
-    --bg: #f8f6f3;
-    --card: #ffffff;
-    --text: #1a1a2e;
-    --text-secondary: #6b7280;
-    --text-weak: #9ca3af;
-    --accent: #1e40af;
-    --accent-hover: #1e3a8a;
-    --green: #059669;
-    --red: #dc2626;
-    --divider: rgba(0,0,0,0.06);
-    --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
-    --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
-    --font-heading: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
-    --font-body: -apple-system, 'SF Pro Display', 'PingFang SC', sans-serif;
-    --font-mono: 'SF Mono', 'JetBrains Mono', 'Fira Code', monospace;
-  }
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
-    font-family: var(--font-body);
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.8;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.75;
     font-size: 15px;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
 
   .container {
-    max-width: 900px;
+    max-width: 720px;
     margin: 0 auto;
-    padding: 48px 32px;
+    padding: 24px;
   }
 
   /* ── MASTHEAD ── */
   .masthead {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding-bottom: 28px;
-    border-bottom: 1px solid var(--divider);
-    margin-bottom: 44px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 32px;
   }
   .masthead-title {
-    font-family: var(--font-heading);
-    font-size: 32px;
-    font-weight: 900;
-    color: var(--text);
-    letter-spacing: 1px;
-    line-height: 1.2;
-  }
-  .masthead-sub {
-    font-size: 12px;
-    color: var(--text-weak);
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-top: 4px;
-    font-weight: 500;
+    font-size: 28px;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.3;
+    margin-bottom: 4px;
   }
   .masthead-meta {
-    text-align: right;
     font-size: 13px;
-    color: var(--text-secondary);
-    line-height: 1.8;
-  }
-  .masthead-date {
-    font-family: var(--font-mono);
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--accent);
-  }
-
-  /* ── HERO ── */
-  .hero { margin-bottom: 48px; }
-  .hero-tag {
-    display: inline-block;
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--accent);
-    font-weight: 600;
-    padding: 4px 14px;
-    background: rgba(30,64,175,0.07);
-    border-radius: 4px;
-    margin-bottom: 20px;
-  }
-  .hero h2 {
-    font-family: var(--font-heading);
-    font-size: 40px;
-    font-weight: 800;
-    line-height: 1.25;
-    color: var(--text);
-    margin-bottom: 16px;
-    letter-spacing: -0.5px;
-  }
-  .hero p {
-    font-size: 16px;
-    color: var(--text-secondary);
-    max-width: 560px;
+    color: #666666;
     line-height: 1.8;
   }
 
   /* ── MARKET BAR ── */
   .market-bar {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-    margin-bottom: 48px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: #e5e5e5;
+    border: 1px solid #e5e5e5;
+    margin-bottom: 40px;
   }
   .market-stat {
-    background: var(--card);
-    border-radius: 8px;
-    padding: 20px 16px;
-    text-align: center;
-    box-shadow: var(--shadow-sm);
+    background: #ffffff;
+    padding: 20px;
   }
   .market-stat .label {
-    font-size: 11px;
-    letter-spacing: 1px;
-    color: var(--text-weak);
-    font-weight: 500;
-    margin-bottom: 8px;
-    text-transform: uppercase;
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 4px;
   }
   .market-stat .value {
-    font-family: var(--font-mono);
     font-size: 20px;
     font-weight: 700;
-    color: var(--text);
+    color: #1a1a1a;
   }
-  .market-stat .value.up { color: var(--green); }
-  .market-stat .value.down { color: var(--red); }
-  .market-stat .value.neutral { color: var(--accent); }
+  .market-stat .value.down { color: #dc2626; }
 
-  /* ── SECTION LABEL ── */
-  .section-label {
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--text-weak);
-    font-weight: 600;
-    margin-bottom: 18px;
+  /* ── SECTION TITLE ── */
+  .section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 16px;
+    margin-top: 40px;
   }
 
   /* ── TABLE ── */
-  .stock-table-wrap {
-    background: var(--card);
-    border-radius: 8px;
-    box-shadow: var(--shadow-sm);
-    overflow: hidden;
-    margin-bottom: 48px;
+  .table-wrap {
+    overflow-x: auto;
+    margin-bottom: 40px;
+    border: 1px solid #e0e0e0;
   }
-  .stock-table {
+  table {
     width: 100%;
     border-collapse: collapse;
     font-size: 14px;
   }
-  .stock-table th {
+  th {
     text-align: left;
-    padding: 12px 18px;
-    font-size: 12px;
-    font-weight: 600;
-    color: #fff;
-    background: var(--text);
-    letter-spacing: 0.5px;
-  }
-  .stock-table td {
-    padding: 14px 18px;
-    border-bottom: 1px solid var(--divider);
-    vertical-align: middle;
-    color: var(--text);
-  }
-  .stock-table tbody tr:nth-child(even) { background: rgba(0,0,0,0.015); }
-  .stock-table tbody tr:last-child td { border-bottom: none; }
-  .stock-table tbody tr:hover { background: rgba(30,64,175,0.03); }
-
-  .stock-name { font-weight: 600; color: var(--text); }
-  .stock-code {
-    font-size: 12px;
-    color: var(--text-weak);
-    font-family: var(--font-mono);
-  }
-  .stock-price {
-    font-family: var(--font-mono);
-    font-weight: 700;
-    font-size: 15px;
-  }
-  .stock-price.up { color: var(--green); }
-  .stock-price.down { color: var(--red); }
-  .stock-change {
-    font-family: var(--font-mono);
+    padding: 10px 14px;
     font-size: 13px;
-    color: var(--text-secondary);
+    font-weight: 700;
+    color: #1a1a1a;
+    background: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+    white-space: nowrap;
   }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #e5e5e5;
+    vertical-align: middle;
+    color: #1a1a1a;
+    line-height: 1.5;
+  }
+  tbody tr:nth-child(even) { background: #fafafa; }
+  tbody tr:last-child td { border-bottom: none; }
+
+  .stock-name { font-weight: 700; }
+  .stock-code { font-size: 13px; color: #666666; }
+  .stock-price { font-weight: 700; }
+  .stock-price.down { color: #dc2626; }
+  .stock-change { font-size: 13px; color: #666666; }
 
   .pill {
     display: inline-block;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 600;
-    padding: 3px 10px;
-    border-radius: 4px;
+    padding: 2px 8px;
+    border: 1px solid #e0e0e0;
+    color: #1a1a1a;
     white-space: nowrap;
   }
-  .pill-long { background: rgba(5,150,105,0.08); color: var(--green); }
-  .pill-short { background: rgba(220,38,38,0.08); color: var(--red); }
-  .pill-wait { background: rgba(30,64,175,0.07); color: var(--accent); }
+  .signal { font-size: 13px; color: #666666; line-height: 1.6; }
 
-  .signal {
-    font-size: 13px;
-    color: var(--text-secondary);
-    max-width: 220px;
-    line-height: 1.6;
-  }
-
-  /* ── DETAIL CARD ── */
-  .detail-card {
-    background: var(--card);
-    border-radius: 8px;
-    padding: 28px;
-    margin-bottom: 20px;
-    box-shadow: var(--shadow-md);
-    position: relative;
-    border-left: 4px solid transparent;
-  }
-  .detail-card.tencent { border-left-color: var(--accent); }
-  .detail-card.moutai { border-left-color: #b45309; }
-
-  .detail-card h3 {
-    font-family: var(--font-heading);
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: 4px;
-  }
-  .detail-card .card-code {
-    font-size: 12px;
-    color: var(--text-weak);
-    font-family: var(--font-mono);
-    margin-bottom: 20px;
-  }
-
-  .detail-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin-bottom: 20px;
-  }
-  .detail-item .dl {
-    font-size: 11px;
-    letter-spacing: 0.5px;
-    color: var(--text-weak);
-    font-weight: 500;
-    margin-bottom: 4px;
-    text-transform: uppercase;
-  }
-  .detail-item .dv {
-    font-family: var(--font-mono);
-    font-size: 17px;
-    font-weight: 700;
-    color: var(--text);
-  }
-  .detail-item .dv.red { color: var(--red); }
-  .detail-item .dv.green { color: var(--green); }
-  .detail-item .dv.amber { color: #b45309; }
-
-  .card-analysis {
-    font-size: 14px;
-    color: var(--text-secondary);
-    line-height: 1.85;
-    padding-top: 16px;
-    border-top: 1px solid var(--divider);
-  }
-  .card-analysis strong { color: var(--text); font-weight: 600; }
-  .card-analysis .bull { color: var(--green); font-weight: 600; }
-  .card-analysis .bear { color: var(--red); font-weight: 600; }
-
-  /* ── INSIGHT BOX ── */
-  .insight {
-    background: var(--card);
-    border-radius: 8px;
-    padding: 28px;
-    margin-bottom: 20px;
-    box-shadow: var(--shadow-sm);
-    border-left: 4px solid #b45309;
-  }
-  .insight h3 {
-    font-size: 13px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: #b45309;
-    font-weight: 700;
-    margin-bottom: 14px;
-  }
-  .insight p {
+  /* ── ANALYSIS TEXT ── */
+  .analysis-section { margin-bottom: 32px; }
+  .analysis-section p {
     font-size: 15px;
-    line-height: 1.9;
-    color: var(--text);
+    color: #1a1a1a;
+    line-height: 1.75;
+    margin-bottom: 1.2em;
   }
-  .insight p strong { font-weight: 600; }
+  .analysis-section p strong { font-weight: 700; color: #000000; }
 
-  /* ── DISCLAIMER ── */
-  .disclaimer {
-    background: rgba(180,83,9,0.04);
-    border: 1px solid rgba(180,83,9,0.12);
-    border-radius: 8px;
-    padding: 18px 22px;
-    margin-bottom: 36px;
-    font-size: 12px;
-    color: var(--text-secondary);
-    line-height: 1.7;
-  }
-  .disclaimer strong { color: var(--text); }
-
-  /* ── CTA BLOCK ── */
-  .cta-block {
+  /* ── PRICING ── */
+  .pricing-block {
     text-align: center;
-    padding: 52px 24px;
-    background: var(--card);
-    border-radius: 8px;
-    box-shadow: var(--shadow-md);
+    padding: 48px 24px;
     margin-bottom: 36px;
-    position: relative;
-    overflow: hidden;
-  }
-  .cta-block::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 10%; right: 10%;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, var(--accent), transparent);
-    border-radius: 2px;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
   }
   .price-tag {
-    font-family: var(--font-heading);
-    font-size: 68px;
-    font-weight: 900;
-    color: var(--accent);
+    font-size: 48px;
+    font-weight: 700;
+    color: #000000;
     line-height: 1;
     margin-bottom: 8px;
-    letter-spacing: -2px;
   }
   .price-note {
     font-size: 15px;
-    color: var(--text-secondary);
+    color: #666666;
     margin-bottom: 20px;
-    letter-spacing: 0.5px;
   }
-  .price-tags {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 32px;
+  .price-stocks {
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 28px;
+    line-height: 2;
   }
-  .price-tags span {
-    font-size: 12px;
-    font-weight: 500;
-    padding: 5px 14px;
-    background: var(--bg);
-    border: 1px solid var(--divider);
-    border-radius: 4px;
-    color: var(--text-secondary);
-  }
-  .cta-link {
+  .btn {
     display: inline-block;
-    padding: 13px 32px;
-    font-size: 14px;
+    padding: 14px 36px;
+    font-size: 15px;
     font-weight: 600;
-    letter-spacing: 0.5px;
     text-decoration: none;
-    color: #fff;
-    background: var(--accent);
-    border-radius: 6px;
-    transition: background 0.2s ease;
+    color: #ffffff;
+    background: #1a1a1a;
+    border: none;
+    cursor: pointer;
   }
-  .cta-link:hover { background: var(--accent-hover); }
+  .btn:hover { background: #333333; }
+  .btn-outline {
+    background: #ffffff;
+    color: #1a1a1a;
+    border: 1px solid #e0e0e0;
+  }
+  .btn-outline:hover { background: #f5f5f5; }
 
   /* ── PAYMENT ── */
-  .payment-section {
-    margin-bottom: 36px;
-  }
+  .payment-section { margin-bottom: 36px; }
   .payment-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 1px;
+    background: #e5e5e5;
+    border: 1px solid #e5e5e5;
     margin-bottom: 28px;
   }
   .payment-card {
-    background: var(--card);
-    border-radius: 8px;
+    background: #ffffff;
     padding: 28px 20px;
     text-align: center;
-    box-shadow: var(--shadow-sm);
   }
   .payment-card h3 {
     font-size: 15px;
     font-weight: 700;
-    color: var(--text);
+    color: #000000;
     margin-bottom: 16px;
   }
   .payment-card img {
     width: 160px;
     height: 160px;
     object-fit: contain;
-    border-radius: 6px;
     margin-bottom: 12px;
   }
   .qrcode-hint {
     font-size: 13px;
-    color: var(--text-secondary);
+    color: #666666;
     line-height: 1.7;
   }
   .contact-line {
     text-align: center;
     font-size: 14px;
-    color: var(--text-secondary);
+    color: #666666;
     line-height: 1.8;
     padding: 16px 0;
+  }
+
+  /* ── DISCLAIMER ── */
+  .disclaimer {
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.7;
+    margin-bottom: 36px;
+    padding: 16px 0;
+    border-top: 1px solid #e5e5e5;
   }
 
   /* ── FOOTER ── */
   .footer {
     text-align: center;
-    font-size: 12px;
-    color: var(--text-weak);
-    padding-top: 28px;
-    border-top: 1px solid var(--divider);
+    font-size: 13px;
+    color: #666666;
+    padding-top: 16px;
+    border-top: 1px solid #e5e5e5;
     line-height: 1.8;
   }
 
   /* ── RESPONSIVE ── */
-  @media (max-width: 768px) {
-    .container { padding: 24px 18px; }
-    .masthead { flex-direction: column; align-items: flex-start; gap: 14px; }
-    .masthead-meta { text-align: left; }
-    .hero h2 { font-size: 28px; }
-    .market-bar { grid-template-columns: repeat(2, 1fr); }
-    .detail-grid { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 640px) {
+    .container { padding: 16px; }
+    body { font-size: 14px; }
+    .masthead-title { font-size: 22px; }
+    .section-title { font-size: 18px; }
+    .market-bar { grid-template-columns: 1fr 1fr; }
     .payment-grid { grid-template-columns: 1fr; }
-    .price-tag { font-size: 48px; }
+    .price-tag { font-size: 36px; }
+    th, td { padding: 8px 10px; font-size: 13px; }
     .signal { display: none; }
-    .stock-table th, .stock-table td { padding: 10px 12px; font-size: 13px; }
-    .stock-change { display: none; }
+    .analysis-section p { font-size: 14px; }
   }
 </style>
 </head>
@@ -460,50 +258,40 @@
 
   <!-- MASTHEAD -->
   <div class="masthead">
-    <div>
-      <div class="masthead-title">AI选股日报</div>
-      <div class="masthead-sub">AI-Powered Daily Brief</div>
-    </div>
+    <div class="masthead-title">AI选股日报</div>
     <div class="masthead-meta">
-      <div class="masthead-date">2026.05.23 星期六</div>
-      <div>数据截止 05.22 收盘</div>
-      <div>第 002 期</div>
+      2026.05.23 星期六 · 数据截止 05.22 收盘 · 第 002 期
     </div>
-  </div>
-
-  <!-- HERO -->
-  <div class="hero">
-    <div class="hero-tag">港股 & A股 · 核心标的</div>
-    <h2>腾讯 + 茅台<br>双龙头的至暗时刻？</h2>
-    <p>腾讯连跌4个月从571跌至441（-23%），茅台创年内新低逼近1300元关口。两家公司均在回购，但技术面空头排列未见反转信号。本期聚焦两大核心资产的价值重估。</p>
   </div>
 
   <!-- MARKET BAR -->
   <div class="market-bar">
     <div class="market-stat">
-      <div class="label">腾讯 00700</div>
+      <div class="label">腾讯控股 00700.HK</div>
       <div class="value down">441.40</div>
     </div>
     <div class="market-stat">
-      <div class="label">茅台 600519</div>
+      <div class="label">贵州茅台 600519.SH</div>
       <div class="value down">1311.00</div>
     </div>
     <div class="market-stat">
-      <div class="label">腾讯 PE/RPE</div>
-      <div class="value neutral">—</div>
+      <div class="label">腾讯 5日回购总额</div>
+      <div class="value">25.04亿</div>
     </div>
     <div class="market-stat">
       <div class="label">茅台 PE(TTM)</div>
-      <div class="value neutral">14.8x</div>
+      <div class="value">14.8x</div>
     </div>
   </div>
 
   <!-- TABLE -->
-  <div class="section-label">本期标的 · 核心数据</div>
-  <div class="stock-table-wrap">
-    <table class="stock-table">
+  <div class="section-title">本期标的</div>
+  <div class="table-wrap">
+    <table>
       <thead>
-        <tr><th>名称</th><th>代码</th><th>收盘价</th><th>均线状态</th><th>方向</th><th>关键信号</th></tr>
+        <tr>
+          <th>名称</th><th>代码</th><th>收盘价</th><th>均线状态</th><th>方向</th><th>关键信号</th>
+        </tr>
       </thead>
       <tbody>
         <tr>
@@ -511,125 +299,54 @@
           <td><span class="stock-code">00700.HK</span></td>
           <td><span class="stock-price down">441.40</span></td>
           <td><span class="stock-change">MA5↓449 / MA20↓461 / MA60↓493</span></td>
-          <td><span class="pill pill-wait">谨慎偏多</span></td>
+          <td><span class="pill">谨慎偏多</span></td>
           <td class="signal">连续5日回购25亿，RSI 36.3逼近超卖，下影线显示435有承接</td>
         </tr>
         <tr>
           <td><span class="stock-name">贵州茅台</span></td>
-          <td><span class="stock-code">600519.SS</span></td>
+          <td><span class="stock-code">600519.SH</span></td>
           <td><span class="stock-price down">1311.00</span></td>
           <td><span class="stock-change">MA5↓1323 / MA20↓1346 / MA30↓1358</span></td>
-          <td><span class="pill pill-wait">谨慎观望</span></td>
+          <td><span class="pill">谨慎观望</span></td>
           <td class="signal">年内新低1314，PE 14.8x历史低位，1300整数关口关键防线</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <!-- DETAIL: TENCENT -->
-  <div class="detail-card tencent">
-    <h3>腾讯控股 · 深度分析</h3>
-    <div class="card-code">00700.HK — 数据截止 2026.05.22</div>
-    <div class="detail-grid">
-      <div class="detail-item">
-        <div class="dl">收盘价</div>
-        <div class="dv red">441.40</div>
-      </div>
-      <div class="detail-item">
-        <div class="dl">MA5 / MA20 / MA60</div>
-        <div class="dv amber">449 / 461 / 493</div>
-      </div>
-      <div class="detail-item">
-        <div class="dl">RSI(14) / 量比</div>
-        <div class="dv">36.3 / 0.81</div>
-      </div>
-      <div class="detail-item">
-        <div class="dl">MACD柱</div>
-        <div class="dv red">-0.55 (动能减弱)</div>
-      </div>
-      <div class="detail-item">
-        <div class="dl">连跌幅度(2月高→今)</div>
-        <div class="dv red">-22.8%</div>
-      </div>
-      <div class="detail-item">
-        <div class="dl">5日回购总额</div>
-        <div class="dv green">25.04亿</div>
-      </div>
-    </div>
-    <div class="card-analysis">
-      <strong>技术面：</strong>完美空头排列，均线发散向下形成层层压制。自2月571高点一路下行，5月12日后加速破位。最新K线呈长下影锤子线（低点423，收441），短线超跌后有技术修复需求。RSI 36.3虽未进入超卖区但已偏低。<br><br>
-      <strong>资金面：</strong><span class="bull">公司连续5个交易日回购共25.04亿港元</span>，5月22日以439-445港元回购113.2万股。年内累计回购111.59亿港元，彰显管理层信心。但大市资金面偏弱，量比仅0.81。<br><br>
-      <strong>关键点位：</strong>支撑 435-440 / 420-423 | 压力 460-480 / 500-507<br>
-      <strong>策略：</strong>已持仓者不建议在440以下割肉，等反弹至460-470区域减仓。观望者关注435能否企稳形成双底，放量站回460再考虑。短线可在423-440区间轻仓博弈超跌反弹，跌破420止损。
-    </div>
+  <!-- ANALYSIS: TENCENT -->
+  <div class="section-title">今日聚焦 · 腾讯控股</div>
+  <div class="analysis-section">
+    <p><strong>技术面：</strong>完美空头排列，均线发散向下形成层层压制。自2月571高点一路下行，5月12日后加速破位。最新K线呈长下影锤子线（低点423，收441），短线超跌后有技术修复需求。RSI 36.3虽未进入超卖区但已偏低。</p>
+    <p><strong>资金面：</strong>公司连续5个交易日回购共25.04亿港元，5月22日以439-445港元回购113.2万股。年内累计回购111.59亿港元，彰显管理层信心。但大市资金面偏弱，量比仅0.81。</p>
+    <p><strong>关键点位：</strong>支撑 435-440 / 420-423 | 压力 460-480 / 500-507</p>
+    <p><strong>策略：</strong>已持仓者不建议在440以下割肉，等反弹至460-470区域减仓。观望者关注435能否企稳形成双底，放量站回460再考虑。短线可在423-440区间轻仓博弈超跌反弹，跌破420止损。</p>
   </div>
 
-  <!-- DETAIL: MOUTAI -->
-  <div class="detail-card moutai">
-    <h3>贵州茅台 · 深度分析</h3>
-    <div class="card-code">600519.SS — 数据截止 2026.05.22</div>
-    <div class="detail-grid">
-      <div class="detail-item">
-        <div class="dl">收盘价</div>
-        <div class="dv red">1311.00</div>
-      </div>
-      <div class="detail-item">
-        <div class="dl">1月高→今跌幅</div>
-        <div class="dv red">-6.1%</div>
-      </div>
-      <div class="detail-item">
-        <div class="dl">PE(TTM) / PB</div>
-        <div class="dv amber">14.8x / 5.96</div>
-      </div>
-      <div class="detail-item">
-        <div class="dl">Q1 茅台酒营收</div>
-        <div class="dv green">460亿</div>
-      </div>
-      <div class="detail-item">
-        <div class="dl">FY2026 EPS预测</div>
-        <div class="dv">68.86元</div>
-      </div>
-      <div class="detail-item">
-        <div class="dl">总市值</div>
-        <div class="dv amber">1.65万亿</div>
-      </div>
-    </div>
-    <div class="card-analysis">
-      <strong>技术面：</strong>自4月中旬进入下跌通道，5月20日创年内新低1314元，收1315。均线空头排列（MA5↓1323 / MA20↓1346），层层压制。近期K线出现长下影线，1300整数关口附近出现短期抵抗。放量下跌后量能有所收敛。<br><br>
-      <strong>基本面：</strong>Q1茅台酒营收460亿，系列酒78.8亿，直销占比继续提升。45家机构预测FY2026净利润862亿（+4.9% YoY），EPS 68.86元。PE(TTM) 14.8x处于历史低位区间。<span class="bull">5月8日公告回购实施进展</span>，5月22日发布商标许可协议等8条公告。<br><br>
-      <strong>关键点位：</strong>支撑 1300 / 1260 | 压力 1340-1350 / 1400<br>
-      <strong>策略：</strong>PE 14.8x已具备长期配置价值，但技术面尚未企稳。已持仓者守1300，跌破需减仓防进一步下探。观望者可在1300附近分批建仓（每跌3%-5%加一笔），右侧确认等站回1400再追。中线投资者当前价格性价比显著。
-    </div>
+  <!-- ANALYSIS: MOUTAI -->
+  <div class="section-title">今日聚焦 · 贵州茅台</div>
+  <div class="analysis-section">
+    <p><strong>技术面：</strong>自4月中旬进入下跌通道，5月20日创年内新低1314元，收1315。均线空头排列（MA5↓1323 / MA20↓1346），层层压制。近期K线出现长下影线，1300整数关口附近出现短期抵抗。放量下跌后量能有所收敛。</p>
+    <p><strong>基本面：</strong>Q1茅台酒营收460亿，系列酒78.8亿，直销占比继续提升。45家机构预测FY2026净利润862亿（+4.9% YoY），EPS 68.86元。PE(TTM) 14.8x处于历史低位区间。5月8日公告回购实施进展，5月22日发布商标许可协议等8条公告。</p>
+    <p><strong>关键点位：</strong>支撑 1300 / 1260 | 压力 1340-1350 / 1400</p>
+    <p><strong>策略：</strong>PE 14.8x已具备长期配置价值，但技术面尚未企稳。已持仓者守1300，跌破需减仓防进一步下探。观望者可在1300附近分批建仓（每跌3%-5%加一笔），右侧确认等站回1400再追。中线投资者当前价格性价比显著。</p>
   </div>
 
-  <!-- INSIGHT: REVIEW -->
-  <div class="insight">
-    <h3>昨日复盘</h3>
-    <p>5月22日港股A股延续调整。汇丰控股(00005)均线多头排列完整，逆势走强至143.5；腾讯(00700)小幅反弹至441.4，锤子线止跌信号初现但量能不足；茅台(600519)逼近1260防线，空头排列未见反转；比亚迪(01211)三重底部区域企稳，中长期布局逻辑不变。整体市场风险偏好偏弱，操作上以控仓观望为主。<br><br>今日核心关注：腾讯能否放量站上MA5确认反弹；茅台1260防线能否守住；汇丰145压力位能否突破。</p>
+  <!-- REVIEW -->
+  <div class="section-title">昨日复盘</div>
+  <div class="analysis-section">
+    <p>5月22日港股A股延续调整。汇丰控股(00005)均线多头排列完整，逆势走强至143.5；腾讯(00700)小幅反弹至441.4，锤子线止跌信号初现但量能不足；茅台(600519)逼近1260防线，空头排列未见反转；比亚迪(01211)三重底部区域企稳，中长期布局逻辑不变。整体市场风险偏好偏弱，操作上以控仓观望为主。</p>
+    <p>今日核心关注：腾讯能否放量站上MA5确认反弹；茅台1260防线能否守住；汇丰145压力位能否突破。</p>
   </div>
 
-  <!-- INSIGHT: EDITOR -->
-  <div class="insight">
-    <h3>主编点评</h3>
-    <p>本期两大核心资产同时处于技术性熊市。腾讯从571跌至441（-23%），茅台创年内新低逼近1300。但需要注意两个关键区别：<br><br>
-    <strong>腾讯</strong>是"成长股杀估值"——回购力度是最大亮点，连续5天25亿、年内累计111亿，公司用真金白银表达信心。435-440区域能否形成双底是短期关键。<br><br>
-    <strong>茅台</strong>是"大白马杀逻辑"——PE 14.8x进入历史低位区间，但白酒行业周期拐点担忧未消。1300元不仅是心理关口，更是估值锚定的关键防线。<br><br>
-    整体判断：<strong style="color:#b45309;">左侧价值区已至，右侧信号未现。不宜恐慌割肉，也不宜重仓抄底。控制仓位，等待放量确认。</strong></p>
-  </div>
-
-  <!-- DISCLAIMER -->
-  <div class="disclaimer">
-    <strong>免责声明：</strong>本报告由AI模型基于公开市场数据自动生成，仅供参考，不构成任何投资建议。所有分析基于截至2026年5月22日收盘数据（2026年5月23日为周六非交易日）。股市有风险，投资需谨慎。过往表现不代表未来收益。数据来源：东方财富、同花顺、雪球、证券时报。
-  </div>
-
-  <!-- CTA PRICING -->
-  <div class="cta-block">
+  <!-- PRICING -->
+  <div class="pricing-block">
     <div class="price-tag">¥ 9.9</div>
-    <div class="price-note">10 份完整报告 · 3.5 万字 · K 线图表 · AI 生成</div>
-    <div class="price-tags">
-      <span>腾讯</span><span>茅台</span><span>宁德</span><span>阿里</span><span>美团</span><span>小米</span><span>京东</span><span>比亚迪</span><span>汇丰</span><span>平安</span>
+    <div class="price-note">10份完整报告 · K线图表 · 深度分析</div>
+    <div class="price-stocks">
+      覆盖股票：腾讯 · 茅台 · 宁德 · 阿里 · 美团 · 小米 · 京东 · 比亚迪 · 汇丰 · 平安
     </div>
-    <a href="./reports.html" class="cta-link">查看完整报告 →</a>
+    <a href="./reports.html" class="btn">查看完整报告</a>
   </div>
 
   <!-- PAYMENT -->
@@ -647,19 +364,19 @@
       </div>
     </div>
     <div class="contact-line">
-      付款后请添加微信发送截图，自动获取完整报告下载链接<br>
-      如需定制单只股票深度分析，同样微信联系即可
+      付款后请添加微信发送截图，获取完整报告下载链接<br>
+      如需定制单只股票深度分析，同样微信联系
     </div>
   </div>
 
-  <!-- SECONDARY CTA -->
-  <div class="cta-block" style="padding: 36px 24px;">
-    <a href="./reports.html" class="cta-link">查看历史报告 →</a>
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    <strong>免责声明：</strong>本报告由AI模型基于公开市场数据自动生成，仅供参考，不构成任何投资建议。所有分析基于截至2026年5月22日收盘数据（2026年5月23日为周六非交易日）。股市有风险，投资需谨慎。过往表现不代表未来收益。数据来源：东方财富、同花顺、雪球、证券时报。
   </div>
 
   <!-- FOOTER -->
   <div class="footer">
-    数据来源：东方财富公开市场数据 &nbsp;·&nbsp; AI 模型生成，仅供参考，不构成投资建议 &nbsp;·&nbsp; 2026 Agent Cluster
+    AI生成 · 仅供参考不构成投资建议 · Agent Cluster v1.0
   </div>
 
 </div>
